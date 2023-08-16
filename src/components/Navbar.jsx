@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -8,8 +8,34 @@ const Navbar = ({ theme, switchTheme }) => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle(!toggle);
   const [activeTab, setActiveTab] = useState("home");
+  const [pos, setPos] = useState("top");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      // Clean up the event listener when the component unmounts
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+  const handleScroll = () => {
+    let scrolled = window.scrollY;
+    if (scrolled >= 5) {
+      setPos("moved");
+    } else {
+      setPos("top");
+    }
+  };
   return (
-    <Container>
+    <Container
+      style={{
+        backgroundColor:
+          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(255, 255, 255)",
+      }}
+    >
       <Link to={"/"} className="link-styles">
         <h1 className="name">
           Amir <span>Tahiri</span>
