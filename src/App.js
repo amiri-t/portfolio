@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -11,9 +12,7 @@ function App() {
   return (
     <div className="App" data-theme={theme}>
       <Navbar switchTheme={switchTheme} theme={theme} />
-      <Routes>
-        hello
-      </Routes>
+      <Routes>hello</Routes>
     </div>
   );
 }
