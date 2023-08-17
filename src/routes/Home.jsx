@@ -5,6 +5,7 @@ import Statistics from "../components/homePageComponents/Statistics";
 import MyServices from "../components/homePageComponents/MyServices";
 import ProgrammingLanguages from "../components/homePageComponents/ProgrammingLanguages";
 import UIServices from "../components/homePageComponents/UIServices";
+import Skills from "../components/homePageComponents/Skills";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <MyServices />
       <ProgrammingLanguages />
       <UIServices />
+      <Skills />
     </Container>
   );
 };

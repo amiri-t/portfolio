@@ -36,8 +36,8 @@ const MyServices = () => {
             />
             <h2>Design</h2>
             <p>
-              Crafting visually captivating and user-centric designs that
-              breathe life into digital spaces.
+              Crafting visually captivating and user-centric UI & UX designs
+              that breathe life into digital spaces.
             </p>
             <button>SEE MORE</button>
           </div>
@@ -68,6 +68,10 @@ const Container = styled.div`
       img {
         width: 100px;
       }
+      h2 {
+        font-weight: 800;
+        font-family: "Comfortaa", cursive;
+      }
       button {
         font-size: 17px;
         background: var(--fontPrimaryColor);
@@ -79,7 +83,7 @@ const Container = styled.div`
         transition: 0.4s;
         border-radius: 10px;
         :hover {
-          transform: scale(1.04);
+          box-shadow: 0 0 10px 3px var(--shadowColor);
         }
       }
     }
@@ -106,24 +110,12 @@ const Container = styled.div`
         span {
           color: var(--primaryColor);
           font-weight: 500;
+          font-family: "Comfortaa", cursive;
         }
       }
       p {
         color: var(--fontSecondaryColor);
         font-size: 15px;
-      }
-      button {
-        font-size: 17px;
-        background: var(--fontPrimaryColor);
-        color: var(--primaryBackgroundColor);
-        padding: 12px 20px;
-        margin-top: 10px;
-        cursor: pointer;
-        transition: 0.4s;
-        border-radius: 10px;
-        :hover {
-          color: var(--primaryColor);
-        }
       }
     }
     .i2 {

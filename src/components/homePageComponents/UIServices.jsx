@@ -128,7 +128,7 @@ const Container = styled.div`
         font-weight: 300;
       }
       :hover {
-        box-shadow: 0 0 12px 2px #c9c9c9;
+        box-shadow: 0 0 12px 2px var(--shadowColor1);
       }
     }
   }

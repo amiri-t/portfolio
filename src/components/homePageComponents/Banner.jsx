@@ -41,7 +41,8 @@ const Container = styled.div`
     }
     h1 {
       font-size: 2em;
-      font-weight: 500;
+      font-weight: 700;
+      font-family: "Comfortaa", cursive;
       background: var(--gradientBackground);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

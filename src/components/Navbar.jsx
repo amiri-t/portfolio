@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
+import logo from "../assets/personalLogoPng.png";
+import logoDm from "../assets/dmPersonalLogoPng.png";
 
 const Navbar = ({ theme, switchTheme }) => {
   const [toggle, setToggle] = useState(false);
@@ -32,9 +34,11 @@ const Navbar = ({ theme, switchTheme }) => {
   return (
     <Container className={pos === "top" ? "top" : "scrolled"}>
       <Link to={"/"} className="link-styles">
-        <h1 className="name">
-          A.T <span>Portfolio</span>
-        </h1>
+        {theme === "dark" ? (
+          <img className="logo" src={logoDm} alt="" />
+        ) : (
+          <img className="logo" src={logo} alt="" />
+        )}
       </Link>
       <ul
         onClick={handleToggle}
@@ -111,11 +115,9 @@ const Container = styled.div`
   z-index: 100;
   overflow-x: visible;
   transition: 0.2s;
-  .name {
-    font-weight: 500;
-    span {
-      color: var(--primaryColor);
-    }
+  .logo {
+    width: 150px;
+    margin-top: 7px;
   }
   .nav-menu {
     display: flex;
