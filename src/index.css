@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap");
 
 * {
   padding: 0;
@@ -27,15 +27,16 @@ code {
   --primaryColorDark: #2ca0b8;
   --primaryColorLight: #73bbc9b6;
   --secondaryColor: #f1d4e5;
-  --primaryBackgroundColor: #fafafa;
+  --primaryBackgroundColor: #ffffff;
   --secondaryBackgroundColor: #dadada;
-  --trBackgroundColor: #fffffff1;
+  --trBackgroundColor: #ffffffb2;
   --fontPrimaryColor: #2c2c2c;
   --fontPrimaryColorOpp: #e7e7e7;
   --fontSecondaryColor: #7a7a7a;
   --scrollbarColor: #cacaca;
   --bgColor2: #d6d5d5;
-  --shadowColor: #c2c2c2;
+  --shadowColor1: #d8d8d8;
+  --shadowColor2: #ececec;
 
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
@@ -49,7 +50,12 @@ code {
   );
   --backgroundGradient3: radial-gradient(
     circle at 12% 60%,
-    #64a1e2 2%,
+    #7aafe7 2%,
+    #ffffff 13%
+  );
+  --backgroundGradient4: radial-gradient(
+    circle at 90% 58%,
+    #7aafe7 2%,
     #ffffff 13%
   );
 
@@ -74,15 +80,16 @@ code {
   --primaryColor: #73bbc9;
   --primaryColorLight: #73bbc9b6;
   --secondaryColor: #f1d4e5;
-  --primaryBackgroundColor: #2c2c2c;
+  --primaryBackgroundColor: #040c18;
   --secondaryBackgroundColor: #313131;
-  --trBackgroundColor: #040c18ee;
+  --trBackgroundColor: #040c18bd;
   --fontPrimaryColor: rgb(243, 243, 243);
   --fontPrimaryColorOpp: #070707;
   --fontSecondaryColor: rgb(190, 190, 190);
   --scrollbarColor: #040c18;
   --bgColor2: #142b4b;
-  --shadowColor: #0d2863;
+  --shadowColor1: #0c478552;
+  --shadowColor2: #061020;
 
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
@@ -96,6 +103,11 @@ code {
   );
   --backgroundGradient3: radial-gradient(
     circle at 10% 60%,
+    #002853 0%,
+    #040c18 13%
+  );
+  --backgroundGradient4: radial-gradient(
+    circle at 90% 58%,
     #002853 0%,
     #040c18 13%
   );

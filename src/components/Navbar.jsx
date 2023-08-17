@@ -30,15 +30,10 @@ const Navbar = ({ theme, switchTheme }) => {
     }
   };
   return (
-    <Container
-      style={{
-        backgroundColor:
-          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(255, 255, 255)",
-      }}
-    >
+    <Container className={pos === "top" ? "top" : "scrolled"}>
       <Link to={"/"} className="link-styles">
         <h1 className="name">
-          Amir <span>Tahiri</span>
+          A.T <span>Portfolio</span>
         </h1>
       </Link>
       <ul
@@ -100,16 +95,18 @@ const Navbar = ({ theme, switchTheme }) => {
     </Container>
   );
 };
+
 const Container = styled.div`
-  background-color: var(--trBackgroundColor);
+  backdrop-filter: blur(7px);
   color: var(--fontPrimaryColor);
+  background: var(--trBackgroundColor);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1% 4%;
   position: fixed;
   top: 0;
-  height: 70px;
+  height: 60px;
   width: 100%;
   z-index: 100;
   overflow-x: visible;
@@ -180,7 +177,7 @@ const Container = styled.div`
     .nav-menu {
       color: var(--fontPrimaryColor);
       background: var(--backgroundGradient2);
-      width: 70%;
+      width: 90%;
       height: 100vh;
       display: flex;
       flex-direction: column;

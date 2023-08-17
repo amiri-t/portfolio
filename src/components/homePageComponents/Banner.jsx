@@ -24,6 +24,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2em;
+  transition: 0.4s;
   .left {
     h3 {
       font-weight: 300;
@@ -32,6 +33,7 @@ const Container = styled.div`
       font-size: 6em;
       font-weight: 900;
       line-height: 1em;
+      font-family: "Montserrat", sans-serif;
       .ln {
         font-weight: 900;
         color: var(--fontSecondaryColor);
