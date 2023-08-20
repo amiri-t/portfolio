@@ -24,7 +24,7 @@ const Skills = () => {
             <span>
               <div></div>
             </span>
-            <h4>97%</h4>
+            <h4>98%</h4>
           </div>
           <div className="row">
             <AiOutlineCheck className="icon" />
@@ -52,7 +52,7 @@ const Skills = () => {
           </div>
           <div className="row">
             <AiOutlineCheck className="icon" />
-            <h3>Tailwind</h3>
+            <h3>Tailwind CSS</h3>
             <span>
               <div></div>
             </span>
@@ -89,6 +89,7 @@ const Container = styled.div`
   gap: 4em;
   img {
     width: 40%;
+    max-width: 600px;
   }
   .right {
     width: 40%;
@@ -124,14 +125,14 @@ const Container = styled.div`
             border-radius: 4px;
             background-color: #28b828;
             height: 10px;
-            width: 194px;
+            width: 237px;
           }
         }
         :nth-child(2) {
           span {
             width: 240px;
             div {
-              width: 180px;
+              width: 236px;
             }
           }
         }
@@ -139,7 +140,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 177px;
+              width: 228px;
             }
           }
         }
@@ -147,7 +148,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 170px;
+              width: 220px;
             }
           }
         }
@@ -155,7 +156,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 157px;
+              width: 210px;
             }
           }
         }
@@ -163,7 +164,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 187px;
+              width: 230px;
             }
           }
         }
@@ -171,7 +172,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 180px;
+              width: 233px;
             }
           }
         }
@@ -179,7 +180,7 @@ const Container = styled.div`
           span {
             width: 240px;
             div {
-              width: 180px;
+              width: 236px;
             }
           }
         }

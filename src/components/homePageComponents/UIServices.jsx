@@ -90,6 +90,9 @@ const Container = styled.div`
     h1 {
       font-family: "Comfortaa", cursive;
       font-weight: 600;
+      background: var(--gradientBackground);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     p {
       width: 60%;

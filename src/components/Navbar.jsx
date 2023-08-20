@@ -32,7 +32,13 @@ const Navbar = ({ theme, switchTheme }) => {
     }
   };
   return (
-    <Container className={pos === "top" ? "top" : "scrolled"}>
+    <Container
+      style={
+        pos === "top"
+          ? { background: "rgba(0, 0, 0, 0)" }
+          : { background: "var(--trBackgroundColor)" }
+      }
+    >
       <Link to={"/"} className="link-styles">
         {theme === "dark" ? (
           <img className="logo" src={logoDm} alt="" />
