@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import img from "../../assets/homePageAssets/skillsImg.png";
 import { AiOutlineCheck } from "react-icons/ai";
 
 const Skills = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2 },
+        x: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, x: 100 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
-    <Container>
+    <Container ref={ref}>
       <img src={img} alt="" />
-      <div className="right">
+      <motion.div className="right" animate={animation}>
         <h2 className="title">My Skills</h2>
         <div className="rows">
           <div className="row">
@@ -76,7 +97,7 @@ const Skills = () => {
           </div>
         </div>
         <button>EXLPLORE ALL </button>
-      </div>
+      </motion.div>
     </Container>
   );
 };

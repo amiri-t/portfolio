@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
+import Footer from "./components/homePageComponents/Footer";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer switchTheme={switchTheme} theme={theme} />
     </div>
   );
 }

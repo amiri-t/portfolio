@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import webUIicon from "../../assets/homePageAssets/webUIicon.png";
 
 const UIServices = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2 },
+        x: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, x: 100 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
     <Container>
       <div className="title">
@@ -14,7 +35,7 @@ const UIServices = () => {
           digital experiences.
         </p>
       </div>
-      <div className="items">
+      <motion.div animate={animation} className="items" ref={ref}>
         <div className="item">
           <img src={webUIicon} alt="" />
           <h3>Website UI</h3>
@@ -78,7 +99,7 @@ const UIServices = () => {
             interactivity and engagement.
           </p>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };

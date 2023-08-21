@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const MyServices = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2 },
+        y: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, y: 100 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
     <Container>
-      <div className="items">
+      <div className="items" ref={ref}>
         <div className="top">
           <div className="item i1">
             <h2>
@@ -16,7 +37,7 @@ const MyServices = () => {
             </p>
             <button>DISCOVER ALL</button>
           </div>
-          <div className="item i2">
+          <motion.div animate={animation} className="item i2">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5596/5596612.png"
               alt=""
@@ -26,10 +47,10 @@ const MyServices = () => {
               Transforming concepts into fully functional, responsive websites.
             </p>
             <button>SEE MORE</button>
-          </div>
+          </motion.div>
         </div>
         <div className="bottom">
-          <div className="item i2">
+          <motion.div animate={animation} className="item i2">
             <img
               src="https://icons-for-free.com/iconfiles/png/512/color+web+design-131983707946616457.png"
               alt=""
@@ -40,9 +61,9 @@ const MyServices = () => {
               that breathe life into digital spaces.
             </p>
             <button>SEE MORE</button>
-          </div>
+          </motion.div>
 
-          <div className="item i2 last">
+          <motion.div animate={animation} className="item i2 last">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5681/5681665.png"
               alt=""
@@ -50,7 +71,7 @@ const MyServices = () => {
             <h2>SEO</h2>
             <p>Elevating online visibility through strategic SEO techniques.</p>
             <button>SEE MORE</button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Container>

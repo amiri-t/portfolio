@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const ProgrammingLanguages = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2 },
+        y: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, y: 100 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
-    <Container>
-      <div className="items">
+    <Container ref={ref}>
+      <motion.div animate={animation} className="items">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
           alt=""
@@ -39,7 +60,7 @@ const ProgrammingLanguages = () => {
           src="https://www.daggala.com/static/228867c3668e439101821568a8a03b54/19ca5/sc.png"
           alt=""
         />
-      </div>
+      </motion.div>
     </Container>
   );
 };
