@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <Container>
       <div className="title">
-        <h1>My Projects</h1>
+        <h1>Recent Projects</h1>
         <p>Exploring a Selection of My Diverse Creations</p>
       </div>
       <div className="projects">

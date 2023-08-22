@@ -29,7 +29,7 @@ const Skills = () => {
     <Container ref={ref}>
       <img src={img} alt="" />
       <motion.div className="right" animate={animation}>
-        <h2 className="title">My Skills</h2>
+        <h2 className="title">My Programming Skills</h2>
         <div className="rows">
           <div className="row">
             <AiOutlineCheck className="icon" />

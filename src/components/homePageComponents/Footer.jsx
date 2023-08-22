@@ -55,7 +55,7 @@ const Container = styled.div`
   justify-content: space-around;
   padding: 4em 4%;
   gap: 1em;
-  box-shadow: 0 0 12px 2px var(--shadowColor);
+  box-shadow: 0 0 7px 1px var(--shadowColor);
   .logo {
     img {
       width: 200px;

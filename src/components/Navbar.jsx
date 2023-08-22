@@ -58,12 +58,14 @@ const Navbar = ({ theme, switchTheme }) => {
             Home
           </li>
         </Link>
-        <li
-          className={activeTab === "destinations" ? "activeTab" : "nonActive"}
-          onClick={() => setActiveTab("destinations")}
-        >
-          Services
-        </li>
+        <Link to={"/services"} className="link-styles">
+          <li
+            className={activeTab === "destinations" ? "activeTab" : "nonActive"}
+            onClick={() => setActiveTab("destinations")}
+          >
+            Services
+          </li>
+        </Link>
         <li
           className={activeTab === "about-us" ? "activeTab" : "nonActive"}
           onClick={() => setActiveTab("about-us")}
