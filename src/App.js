@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
-import Footer from "./components/homePageComponents/Footer";
+import Footer from "./components/Footer";
 import Services from "./routes/Services";
 
 function App() {

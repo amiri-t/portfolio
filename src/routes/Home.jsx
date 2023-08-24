@@ -9,7 +9,6 @@ import Skills from "../components/homePageComponents/Skills";
 import Projects from "../components/homePageComponents/Projects";
 import Testimonials from "../components/homePageComponents/Testimonials";
 import ContactMe from "../components/homePageComponents/ContactMe";
-import Footer from "../components/homePageComponents/Footer";
 
 const Home = () => {
   useEffect(() => {
