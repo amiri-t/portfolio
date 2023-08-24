@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import ServicesBanner from "../components/servicesComponents/ServicesBanner";
+import TheServices from "../components/servicesComponents/TheServices";
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <ServicesBanner />
+      <TheServices />
     </Container>
   );
 };

@@ -14,6 +14,7 @@ function App() {
   };
   return (
     <div className="App" data-theme={theme}>
+      {/* create the why choose me section in the homapage */}
       <Navbar switchTheme={switchTheme} theme={theme} />
       <Routes>
         <Route path="/" element={<Home />} />

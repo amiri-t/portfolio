@@ -76,7 +76,7 @@ const Navbar = ({ theme, switchTheme }) => {
           className={activeTab === "packages" ? "activeTab" : "nonActive"}
           onClick={() => setActiveTab("packages")}
         >
-          Skills
+          Packages
         </li>
         <li
           className={activeTab === "about-us" ? "activeTab" : "nonActive"}
@@ -142,24 +142,6 @@ const Container = styled.div`
     .activeTab {
       color: var(--primaryColor);
       font-weight: 600;
-    }
-    .buttons {
-      display: flex;
-      gap: 7px;
-      button {
-        padding: 10px 14px;
-        font-family: "Poppins", sans-serif;
-        font-size: 15px;
-        border: none;
-        background: var(--fontPrimaryColor);
-        color: var(--fontPrimaryColorOpp);
-        border-radius: 7px;
-        cursor: pointer;
-        :hover {
-          background: var(--primaryColor);
-          transition: 0.3s;
-        }
-      }
     }
   }
   .themeIcon {

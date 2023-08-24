@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import bannerImg from "../../assets/servicesPageAssets/servicesBannerImg.png";
 
 const ServicesBanner = () => {
   return (
@@ -25,7 +24,6 @@ const Container = styled.div`
   align-items: center;
   gap: 2em;
   background: var(--backgroundGradient4);
-
   .left {
     h1 {
       text-align: center;
@@ -40,11 +38,27 @@ const Container = styled.div`
     }
     p {
       text-align: center;
+      font-weight: 300;
     }
   }
   img {
     width: 50%;
     max-width: 600px;
+  }
+  @media (max-width: 660px) {
+    .left {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+  @media (max-width: 460px) {
+    padding: 4em 7%;
+    .left {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
   }
 `;
 
