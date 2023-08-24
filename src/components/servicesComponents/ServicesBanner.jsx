@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const ServicesBanner = () => {
   return (
     <Container>
-      <div className="left">
+      <motion.div
+        className="left"
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 200, opacity: 0 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      >
         <h1>
           Amplifying Business Growth with Expert Design, Development, and SEO
           Strategies.
@@ -13,7 +19,7 @@ const ServicesBanner = () => {
           Elevate Your Business Potential with a professional website, Enabling
           Your Journey to Scale New Heights.
         </p>
-      </div>
+      </motion.div>
     </Container>
   );
 };

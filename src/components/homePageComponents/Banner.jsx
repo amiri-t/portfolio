@@ -1,18 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import bannerImg from "../../assets/homePageAssets/bannerImg.png";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
     <Container>
-      <div className="left">
+      <motion.div
+        className="left"
+        animate={{ x: 0 }}
+        initial={{ x: -500 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      >
         <h3>Hello there, my name is</h3>
         <span>
           Amir <br /> <h3 className="ln">Tahiri</h3>
         </span>
         <h1>Web Designer & Developer</h1>
-      </div>
-      <img src={bannerImg} alt="" />
+      </motion.div>
+      <motion.img
+        src={bannerImg}
+        alt=""
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 200, opacity: 0 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      />
     </Container>
   );
 };

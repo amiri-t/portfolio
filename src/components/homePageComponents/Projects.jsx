@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import asites from "../../assets/homePageAssets/ASites Agency.png";
 import travelo from "../../assets/homePageAssets/Travelo.png";
 import theTastyTable from "../../assets/homePageAssets/The Tasty Table.png";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const Projects = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2, opacity: 1 },
+        y: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, y: 100, opacity: 0 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
     <Container>
       <div className="title">
         <h1>Recent Projects</h1>
         <p>Exploring a Selection of My Diverse Creations</p>
       </div>
-      <div className="projects">
-        <div className="project">
+      <div className="projects" ref={ref}>
+        <motion.div animate={animation} className="project">
           <img src={asites} alt="" />
           <h3>ASites Agency</h3>
           <p>
@@ -20,8 +41,8 @@ const Projects = () => {
             Merging design prowess with advanced authentication, I constructed a
             polished, modern website for unparalleled digital experiences.
           </p>
-        </div>
-        <div className="project">
+        </motion.div>
+        <motion.div animate={animation} className="project">
           <img src={travelo} alt="" />
           <h3>Travelo</h3>
           <p>
@@ -29,8 +50,8 @@ const Projects = () => {
             seamlessly blending design finesse with powerful functionality,
             delivering an immersive user experience and effortless navigation.
           </p>
-        </div>
-        <div className="project">
+        </motion.div>
+        <motion.div animate={animation} className="project">
           <img src={theTastyTable} alt="" />
           <h3>The Tasty Table</h3>
           <p>
@@ -38,7 +59,7 @@ const Projects = () => {
             Combining exquisite design and seamless functionality, I crafted a
             restaurant website that whets appetites and delights patrons.
           </p>
-        </div>
+        </motion.div>
       </div>
       <h4>See All...</h4>
     </Container>

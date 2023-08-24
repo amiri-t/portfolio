@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
@@ -11,6 +11,8 @@ const Navbar = ({ theme, switchTheme }) => {
   const handleToggle = () => setToggle(!toggle);
   const [activeTab, setActiveTab] = useState("home");
   const [pos, setPos] = useState("top");
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,6 +33,22 @@ const Navbar = ({ theme, switchTheme }) => {
       setPos("top");
     }
   };
+  useEffect(() => {
+    if (pathname === "/") {
+      setActiveTab("home");
+    } else if (pathname === "/services") {
+      setActiveTab("services");
+    } else if (pathname === "/projects") {
+      setActiveTab("projects");
+    } else if (pathname === "/packages") {
+      setActiveTab("packages");
+    } else if (pathname === "/about-me") {
+      setActiveTab("about-me");
+    } else if (pathname === "/contact-me") {
+      setActiveTab("contact-me");
+    }
+  }, [pathname]);
+
   return (
     <Container
       style={
@@ -51,25 +69,16 @@ const Navbar = ({ theme, switchTheme }) => {
         className={toggle ? "nav-menu active" : "nav-menu"}
       >
         <Link to={"/"} className="link-styles">
-          <li
-            className={activeTab === "home" ? "activeTab" : "nonActive"}
-            onClick={() => setActiveTab("home")}
-          >
+          <li className={activeTab === "home" ? "activeTab" : "nonActive"}>
             Home
           </li>
         </Link>
         <Link to={"/services"} className="link-styles">
-          <li
-            className={activeTab === "destinations" ? "activeTab" : "nonActive"}
-            onClick={() => setActiveTab("destinations")}
-          >
+          <li className={activeTab === "services" ? "activeTab" : "nonActive"}>
             Services
           </li>
         </Link>
-        <li
-          className={activeTab === "about-us" ? "activeTab" : "nonActive"}
-          onClick={() => setActiveTab("about-us")}
-        >
+        <li className={activeTab === "projects" ? "activeTab" : "nonActive"}>
           Projects
         </li>
         <li
@@ -78,17 +87,13 @@ const Navbar = ({ theme, switchTheme }) => {
         >
           Packages
         </li>
-        <li
-          className={activeTab === "about-us" ? "activeTab" : "nonActive"}
-          onClick={() => setActiveTab("about-us")}
-        >
+        <li className={activeTab === "about-me" ? "activeTab" : "nonActive"}>
           About Me
         </li>
 
-        <Link to={"/contact-us"} className="link-styles">
+        <Link to={"/contact-me"} className="link-styles">
           <li
-            className={activeTab === "contact-us" ? "activeTab" : "nonActive"}
-            onClick={() => setActiveTab("contact-us")}
+            className={activeTab === "contact-me" ? "activeTab" : "nonActive"}
           >
             Contact Me
           </li>
