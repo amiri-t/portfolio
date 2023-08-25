@@ -23,7 +23,7 @@ const Projects = () => {
       setHasAnimated(true);
     }
     if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, y: 100, opacity: 0 });
+      animation.start({ opacity: 0, y: 100 });
     }
   }, [inView, hasAnimated, animation]);
   return (
