@@ -6,6 +6,7 @@ import theTastyTable from "../../assets/homePageAssets/The Tasty Table.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const { ref, inView } = useInView();
@@ -37,31 +38,34 @@ const Projects = () => {
           <img src={asites} alt="" />
           <h3>ASites Agency</h3>
           <p>
-            Cultivating ASites Agency, I orchestrated a contemporary platform.
-            Merging design prowess with advanced authentication, I constructed a
-            polished, modern website for unparalleled digital experiences.
+            ASites Agency is my own angecy. It a service-based agency where we
+            help small and medimum businesses grow online through Websites,
+            Social Media, Marketing, Content Creation etc.
           </p>
         </motion.div>
         <motion.div animate={animation} className="project">
           <img src={travelo} alt="" />
           <h3>Travelo</h3>
           <p>
-            With creative zeal, I fashioned a dynamic Travel Agency website,
-            seamlessly blending design finesse with powerful functionality,
-            delivering an immersive user experience and effortless navigation.
+            Travelo is a Travel Agnecy website I recently developed. I provides
+            an amazing design and can 100% be used as a SaaS. I provides
+            everything a travel agnecy website needs, including booking systems.
           </p>
         </motion.div>
         <motion.div animate={animation} className="project">
           <img src={theTastyTable} alt="" />
           <h3>The Tasty Table</h3>
           <p>
-            With culinary flair, I curated The Tasty Table's online presence.
-            Combining exquisite design and seamless functionality, I crafted a
-            restaurant website that whets appetites and delights patrons.
+            The Tasty Table is a website I built only for design, it doesnt have
+            any functinalities, or any backend, the client only wanted the
+            desigm, so that's what I did. It also provides 2 themes and
+            animations.
           </p>
         </motion.div>
       </div>
-      <h4>See All...</h4>
+      <Link to={"/projects"}>
+        <h4>See All...</h4>
+      </Link>
     </Container>
   );
 };

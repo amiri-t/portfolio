@@ -34,7 +34,6 @@ const Footer = ({ theme }) => {
           <p>Home</p>
           <p>Services</p>
           <p>Projects</p>
-          <p>Skills</p>
           <p>About Me</p>
           <p>Contact Me</p>
         </div>

@@ -1,17 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import bannerImg from "../../assets/projectsPageAssets/projectsBannerImg2.png";
+import { motion } from "framer-motion";
 
 const ProjectsBanner = () => {
   return (
     <Container>
-      <div className="left">
+      <motion.div
+        className="left"
+        animate={{ x: 0 }}
+        initial={{ x: -500 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      >
         <h1>
           Showcasing Projects Redefining Design and Development Excellence.
         </h1>
         <p>Exploring the Fusion of Creativity and Technology</p>
-      </div>
-      <img className="bannerImg" src={bannerImg} alt="" />
+      </motion.div>
+      <motion.img
+        className="bannerImg"
+        src={bannerImg}
+        alt=""
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 200, opacity: 0 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      />
     </Container>
   );
 };
