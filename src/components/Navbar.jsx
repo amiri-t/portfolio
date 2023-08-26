@@ -83,9 +83,11 @@ const Navbar = ({ theme, switchTheme }) => {
             Projects
           </li>
         </Link>
-        <li className={activeTab === "about-me" ? "activeTab" : "nonActive"}>
-          About Me
-        </li>
+        <Link to={"/about-me"} className="link-styles">
+          <li className={activeTab === "about-me" ? "activeTab" : "nonActive"}>
+            About Me
+          </li>
+        </Link>
         <Link to={"/contact-me"} className="link-styles">
           <li
             className={activeTab === "contact-me" ? "activeTab" : "nonActive"}

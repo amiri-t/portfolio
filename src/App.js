@@ -5,6 +5,7 @@ import Home from "./routes/Home";
 import Footer from "./components/Footer";
 import Services from "./routes/Services";
 import ProjectsPage from "./routes/ProjectsPage";
+import AboutMe from "./routes/AboutMe";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/about-me" element={<AboutMe />} />
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />
     </div>
