@@ -55,9 +55,12 @@ const ProgrammingLanguages = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"
           alt=""
         />
-
         <img
           src="https://www.daggala.com/static/228867c3668e439101821568a8a03b54/19ca5/sc.png"
+          alt=""
+        />
+        <img
+          src="https://assets.asana.biz/transform/ba9b63a3-f255-4088-b5fe-14ab4628f50b/logo-app-figma"
           alt=""
         />
       </motion.div>

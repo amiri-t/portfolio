@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   useEffect(() => {
@@ -7,13 +8,18 @@ const AboutMe = () => {
   }, []);
   return (
     <Container>
-      <div className="title">
+      <motion.div
+        className="title"
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: -400, opacity: 0 }}
+        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+      >
         <h1>About Me</h1>
         <p>
           Fun fact: all this website is about me and I am still making an About
           Me page :), quite smart.
         </p>
-      </div>
+      </motion.div>
       <div className="items">
         <div className="item">
           <p>

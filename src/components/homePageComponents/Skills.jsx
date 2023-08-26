@@ -96,7 +96,6 @@ const Skills = () => {
             <h4>98%</h4>
           </div>
         </div>
-        <button>EXLPLORE ALL </button>
       </motion.div>
     </Container>
   );

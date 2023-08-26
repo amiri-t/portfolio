@@ -14,7 +14,10 @@ import { AiFillGithub } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
 import { motion } from "framer-motion";
 
-const ContactMeComp = () => {
+const ContactMe = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <motion.div
@@ -236,4 +239,4 @@ const Container = styled.div`
   }
 `;
 
-export default ContactMeComp;
+export default ContactMe;
