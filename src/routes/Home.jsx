@@ -9,6 +9,7 @@ import Skills from "../components/homePageComponents/Skills";
 import Projects from "../components/homePageComponents/Projects";
 import Testimonials from "../components/homePageComponents/Testimonials";
 import ContactMe from "../components/homePageComponents/ContactMe";
+import WhyHireMe from "../components/homePageComponents/WhyHireMe";
 
 const Home = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
       <MyServices />
       <Skills />
       <ProgrammingLanguages />
+      <WhyHireMe />
       <UIServices />
       <Projects />
       <Testimonials />

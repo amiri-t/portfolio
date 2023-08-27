@@ -13,16 +13,31 @@ import { MdEmail } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const ContactMeComp = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      animation.start({
+        opacity: 1,
+        transition: { duration: 0.7, delay: 0.2 },
+        x: 0,
+      });
+
+      setHasAnimated(true);
+    }
+    if (!inView && !hasAnimated) {
+      animation.start({ opacity: 0, x: -200 });
+    }
+  }, [inView, hasAnimated, animation]);
   return (
-    <Container>
-      <motion.div
-        animate={{ x: 0, opacity: 1 }}
-        initial={{ x: -400, opacity: 0 }}
-        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
-        className="items"
-      >
+    <Container ref={ref}>
+      <motion.div animate={animation} className="items">
         <div className="item">
           <HiLocationMarker className="icon" />
           <h3>LOCATION</h3>
