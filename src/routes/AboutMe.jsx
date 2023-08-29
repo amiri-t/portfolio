@@ -16,8 +16,8 @@ const AboutMe = () => {
       >
         <h1>About Me</h1>
         <p>
-          Fun fact: all this website is about me and I am still making an About
-          Me page :), quite smart.
+          Fun fact: even though all this website is about me and I'm still
+          making an About Me page :), quite smart.
         </p>
       </motion.div>
       <div className="items">
@@ -109,6 +109,13 @@ const Container = styled.div`
       transition: 0.4s;
       :hover {
         box-shadow: 0 0 10px 3px var(--shadowColor);
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .title {
+      p {
+        width: 90%;
       }
     }
   }

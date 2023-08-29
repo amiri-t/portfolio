@@ -7,6 +7,7 @@ import Services from "./routes/Services";
 import ProjectsPage from "./routes/ProjectsPage";
 import AboutMe from "./routes/AboutMe";
 import ContactMe from "./routes/ContactMe";
+import SelectedProject from "./routes/SelectedProject";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -17,7 +18,6 @@ function App() {
   };
   return (
     <div className="App" data-theme={theme}>
-      {/* create the why choose me section in the homapage */}
       <Navbar switchTheme={switchTheme} theme={theme} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,6 +25,8 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/contact-me" element={<ContactMe />} />
+
+        <Route path="/projects/:projectId" element={<SelectedProject />} />
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />
     </div>

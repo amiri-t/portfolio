@@ -40,6 +40,8 @@ const Navbar = ({ theme, switchTheme }) => {
       setActiveTab("services");
     } else if (pathname === "/projects") {
       setActiveTab("projects");
+    } else if (pathname === "/projects/asites-agency") {
+      setActiveTab("packages");
     } else if (pathname === "/packages") {
       setActiveTab("packages");
     } else if (pathname === "/about-me") {

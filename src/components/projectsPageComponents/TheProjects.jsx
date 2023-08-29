@@ -7,7 +7,7 @@ import amiriSites from "../../assets/projectsPageAssets/AmiriSites.png";
 import dreamDecor from "../../assets/projectsPageAssets/DreamDecor.png";
 import phoneHive from "../../assets/projectsPageAssets/PhoneHive.png";
 import starbucksClone from "../../assets/projectsPageAssets/Starbucks Clone.png";
-import amiriBooks from "../../assets/projectsPageAssets/AmiriBooks.png";
+import { Link } from "react-router-dom";
 
 const TheProjects = () => {
   return (
@@ -23,87 +23,120 @@ const TheProjects = () => {
       </div>
       <div className="projects">
         <div className="project">
-          <img src={asitesAgency} alt="" />
-          <h2>ASites Agency</h2>
+          <Link to={"/projects/asites-agency"} className="link-styles">
+            <img src={asitesAgency} alt="" />
+            <h2>ASites Agency</h2>
+          </Link>
           <p>
             ASites Agency is my own angecy. It a service-based agency where we
             help small and medimum businesses grow online through Websites,
-            Social Media, Marketing, Content Creation etc.
+            Social Media, Marketing, Content Creation, Branding, etc.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/asites-agency"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
         <div className="project">
-          <img src={travelo} alt="" />
-          <h2>Travelo</h2>
+          <Link to={"/projects/travelo"} className="link-styles">
+            <img src={travelo} alt="" />
+            <h2>Travelo</h2>
+          </Link>
           <p>
             Travelo is a Travel Agnecy website I recently developed. I provides
             an amazing design and can 100% be used as a SaaS. I provides
             everything a travel agnecy website needs, including booking systems.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/travelo"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
+
         <div className="project">
-          <img src={amiriSites} alt="" />
-          <h2>AmiriSites</h2>
+          <Link to={"/projects/amiri-sites"} className="link-styles">
+            <img src={amiriSites} alt="" />
+            <h2>AmiriSites</h2>
+          </Link>
           <p>
             AmiriSites is a website that I created for free just to build my
             portfolio. It's an undone web app very similiar to ASites Agency.
             Provides themes, clean responsive design, authentication, etc.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/amiri-sites"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
         <div className="project">
-          <img src={theTTT} alt="" />
-          <h2>The Tasty Table</h2>
+          <Link to={"/projects/the-tasty-table"} className="link-styles">
+            <img src={theTTT} alt="" />
+            <h2>The Tasty Table</h2>
+          </Link>
           <p>
             The Tasty Table is a website I built only for design, it doesnt have
             any functinalities, or any backend, the client only wanted the
             design, so that's what I did. It also provides 2 themes and
             animations.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/the-tasty-table"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
         <div className="project">
-          <img src={dreamDecor} alt="" />
-          <h2>DreamDecor</h2>
+          <Link to={"/projects/dream-decor"} className="link-styles">
+            <img src={dreamDecor} alt="" />
+            <h2>DreamDecor</h2>
+          </Link>
           <p>
             I built DreamDecor 2 years ago. It has a really minimalistic design,
             not becase I wanted to, but I didn't really know how to make cool
             design back then, but it turned out to look pretty cool :) Maybe I
             should redesign it.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/dream-decor"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
         <div className="project">
-          <img src={phoneHive} alt="" />
-          <h2>PhoneHIVE</h2>
+          <Link to={"/projects/phone-hive"} className="link-styles">
+            <img src={phoneHive} alt="" />
+            <h2>PhoneHIVE</h2>
+          </Link>
           <p>
             PhoneHIVE is the biggest website I have every built. I built it
             using React.JS and ASP.NET. The backend is very professional. It's
             the best SaaS + website that I have ever created.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/phone-hive"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
         <div className="project">
-          <img src={starbucksClone} alt="" />
-          <h2>Starbucks Clone</h2>
+          <Link to={"/projects/starbucks-clone"} className="link-styles">
+            <img src={starbucksClone} alt="" />
+            <h2>Starbucks Clone</h2>
+          </Link>
           <p>
             I built that Starbucks Clone website couple of weeks after I started
             learning React.JS. Of course, I did it for free just to showcase my
             skills, even tho it's old it looks pretty nice.
           </p>
-          <button>MORE DETAILS</button>
+          <Link to={"/projects/starbucks-clone"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
         </div>
-        <div className="project">
-          <img src={amiriBooks} alt="" />
-          <h2>AmiriBooks</h2>
+        {/* <div className="project">
+          <Link to={"/projects/amiri-books"} className="link-styles">
+            <img src={amiriBooks} alt="" />
+            <h2>AmiriBooks</h2>
+          </Link>
           <p>
-            Yeah, Amiri all over the place, i like my name. This website is also
+            Yeah, Amiri all over the place, I like my name. This website is also
             just a design website that I built only to showcase my design and
             development skills.
           </p>
-          <button>MORE DETAILS</button>
-        </div>
+          <Link to={"/projects/amiri-books"} className="link-styles">
+            <button>MORE DETAILS</button>
+          </Link>
+        </div> */}
       </div>
     </Container>
   );
@@ -175,6 +208,28 @@ const Container = styled.div`
           color: var(--primaryColor);
           border-bottom: 2px solid var(--primaryColor);
         }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    padding: 6em 2%;
+    .title {
+      p {
+        width: 97%;
+      }
+    }
+    .projects {
+      gap: 4em 1em;
+      .project {
+        width: 47%;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .projects {
+      gap: 4em 1em;
+      .project {
+        width: 97%;
       }
     }
   }

@@ -21,10 +21,10 @@ const Home = () => {
       <Statistics />
       <MyServices />
       <Skills />
-      <ProgrammingLanguages />
       <WhyHireMe />
-      <UIServices />
       <Projects />
+      <ProgrammingLanguages />
+      <UIServices />
       <Testimonials />
       <ContactMe />
     </Container>
@@ -33,6 +33,7 @@ const Home = () => {
 const Container = styled.div`
   color: var(--fontPrimaryColor);
   transition: 0.4s;
+  overflow-x: hidden;
 `;
 
 export default Home;

@@ -53,6 +53,7 @@ const ContactMe = () => {
           <h3>BUSINESS SOCIALS</h3>
           <div>
             <BsInstagram className="icon" />
+            <MdEmail className="icon" />
             <BsDribbble className="icon" />
             <BsYoutube className="icon" />
             <BsPinterest className="icon" />
@@ -213,6 +214,18 @@ const Container = styled.div`
   }
   @media (max-width: 740px) {
     flex-direction: column;
+    .items {
+      max-width: 400px;
+      .item {
+        div {
+          gap: 3px;
+          .icon {
+            padding: 4px;
+            font-size: 37px;
+          }
+        }
+      }
+    }
   }
   @media (max-width: 530px) {
     padding: 7em 1%;

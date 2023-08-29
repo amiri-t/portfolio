@@ -34,34 +34,41 @@ const Projects = () => {
         <p>Exploring a Selection of My Diverse Creations</p>
       </div>
       <div className="projects" ref={ref}>
-        <motion.div animate={animation} className="project">
-          <img src={asites} alt="" />
-          <h3>ASites Agency</h3>
-          <p>
-            ASites Agency is my own angecy. It a service-based agency where we
-            help small and medimum businesses grow online through Websites,
-            Social Media, Marketing, Content Creation etc.
-          </p>
-        </motion.div>
-        <motion.div animate={animation} className="project">
-          <img src={travelo} alt="" />
-          <h3>Travelo</h3>
-          <p>
-            Travelo is a Travel Agnecy website I recently developed. I provides
-            an amazing design and can 100% be used as a SaaS. I provides
-            everything a travel agnecy website needs, including booking systems.
-          </p>
-        </motion.div>
-        <motion.div animate={animation} className="project">
-          <img src={theTastyTable} alt="" />
-          <h3>The Tasty Table</h3>
-          <p>
-            The Tasty Table is a website I built only for design, it doesnt have
-            any functinalities, or any backend, the client only wanted the
-            desigm, so that's what I did. It also provides 2 themes and
-            animations.
-          </p>
-        </motion.div>
+        <Link to={"/projects/asites-agency"} className="link-styles">
+          <motion.div animate={animation} className="project">
+            <img src={asites} alt="" />
+            <h3>ASites Agency</h3>
+            <p>
+              ASites Agency is my own angecy. It a service-based agency where we
+              help small and medimum businesses grow online through Websites,
+              Social Media, Marketing, Content Creation etc.
+            </p>
+          </motion.div>
+        </Link>
+        <Link to={"/projects/travelo"} className="link-styles">
+          <motion.div animate={animation} className="project">
+            <img src={travelo} alt="" />
+            <h3>Travelo</h3>
+            <p>
+              Travelo is a Travel Agnecy website I recently developed. It
+              provides an amazing design and can 100% be used as a SaaS. It also
+              provides everything a travel agnecy website needs, including
+              booking systems.
+            </p>
+          </motion.div>
+        </Link>
+        <Link to={"/projects/the-tasty-table"} className="link-styles">
+          <motion.div animate={animation} className="project">
+            <img src={theTastyTable} alt="" />
+            <h3>The Tasty Table</h3>
+            <p>
+              The Tasty Table is a website I built only for design, it doesnt
+              have any functinalities, or any backend, the client only wanted
+              the desigm, so that's what I did. It also provides 2 themes and
+              animations.
+            </p>
+          </motion.div>
+        </Link>
       </div>
       <Link to={"/projects"}>
         <h4>See All...</h4>
