@@ -1,41 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import asites from "../../assets/homePageAssets/ASites Agency.png";
 import travelo from "../../assets/homePageAssets/Travelo.png";
 import theTastyTable from "../../assets/homePageAssets/The Tasty Table.png";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation1 = useAnimation();
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      animation.start({
-        opacity: 1,
-        transition: { duration: 0.7, delay: 0.2, opacity: 1 },
-        y: 0,
-      });
+    if (isInView) {
+      animation1.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
 
-      setHasAnimated(true);
-    }
-    if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, y: 100 });
-    }
-  }, [inView, hasAnimated, animation]);
   return (
     <Container>
-      <div className="title">
+      <div className="title" ref={ref}>
         <h1>Recent Projects</h1>
         <p>Exploring a Selection of My Diverse Creations</p>
       </div>
-      <div className="projects" ref={ref}>
+      <div className="projects">
         <Link to={"/projects/asites-agency"} className="link-styles">
-          <motion.div animate={animation} className="project">
+          <motion.div
+            className="project"
+            variants={{
+              hidden: { opacity: 0, y: 200 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+          >
             <img src={asites} alt="" />
             <h3>ASites Agency</h3>
             <p>
@@ -46,7 +47,16 @@ const Projects = () => {
           </motion.div>
         </Link>
         <Link to={"/projects/travelo"} className="link-styles">
-          <motion.div animate={animation} className="project">
+          <motion.div
+            className="project"
+            variants={{
+              hidden: { opacity: 0, y: 200 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
+          >
             <img src={travelo} alt="" />
             <h3>Travelo</h3>
             <p>
@@ -58,7 +68,16 @@ const Projects = () => {
           </motion.div>
         </Link>
         <Link to={"/projects/the-tasty-table"} className="link-styles">
-          <motion.div animate={animation} className="project">
+          <motion.div
+            className="project"
+            variants={{
+              hidden: { opacity: 0, y: 200 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{ duration: 0.7, delay: 1, type: "spring" }}
+          >
             <img src={theTastyTable} alt="" />
             <h3>The Tasty Table</h3>
             <p>

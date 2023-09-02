@@ -8,6 +8,7 @@ import ProjectsPage from "./routes/ProjectsPage";
 import AboutMe from "./routes/AboutMe";
 import ContactMe from "./routes/ContactMe";
 import SelectedProject from "./routes/SelectedProject";
+import WebDesignPage from "./routes/WebDesignPage";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -27,6 +28,8 @@ function App() {
         <Route path="/contact-me" element={<ContactMe />} />
 
         <Route path="/projects/:projectId" element={<SelectedProject />} />
+
+        <Route path="/services/web-design" element={<WebDesignPage />} />
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { HiLocationMarker } from "react-icons/hi";
 import {
@@ -17,27 +17,29 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
 const ContactMeComp = () => {
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation1 = useAnimation();
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      animation.start({
-        opacity: 1,
-        transition: { duration: 0.7, delay: 0.2 },
-        x: 0,
-      });
-
-      setHasAnimated(true);
+    if (isInView) {
+      animation1.start("visible");
     }
-    if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, x: -200 });
-    }
-  }, [inView, hasAnimated, animation]);
+    // eslint-disable-next-line
+  }, [isInView]);
   return (
     <Container ref={ref}>
-      <motion.div animate={animation} className="items">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 200 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={animation1}
+        transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+        className="items"
+      >
         <div className="item">
           <HiLocationMarker className="icon" />
           <h3>LOCATION</h3>

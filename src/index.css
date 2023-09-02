@@ -41,22 +41,22 @@ code {
 
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
-    #77b0ee 2%,
+    #88bbf1 2%,
     #ffffff 25%
   );
   --backgroundGradient2: radial-gradient(
     circle at 90% 45%,
-    #74ade9 2%,
+    #97c6f8 2%,
     #ffffff 25%
   );
   --backgroundGradient3: radial-gradient(
     circle at 12% 60%,
-    #8fbff1 2%,
+    #a1c7f0 2%,
     #ffffff 13%
   );
   --backgroundGradient4: radial-gradient(
     circle at 90% 58%,
-    #9bbfe5 2%,
+    #a4caf0 2%,
     #ffffff 13%
   );
 

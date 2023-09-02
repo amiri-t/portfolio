@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { BsCheck2Circle } from "react-icons/bs";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const WhyHireMe = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animation.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
   return (
     <Container>
-      <div className="title">
+      <div className="title" ref={ref}>
         <h1>Why Hire Me</h1>
         <p>
           In this section I will provide you with some reasons to hire me to get
           you to high levels of success with my services.
         </p>
       </div>
-      <div className="items">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 200 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={animation}
+        transition={{ duration: 0.4, delay: 0.4, type: "spring" }}
+        className="items"
+      >
         <div className="item">
           <BsCheck2Circle className="icon" />
           <h2>Seamless Scaling</h2>
@@ -73,7 +94,7 @@ const WhyHireMe = () => {
             success.
           </p>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };

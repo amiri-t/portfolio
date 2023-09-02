@@ -6,6 +6,7 @@ import socailMediaMarketingImg from "../../assets/servicesPageAssets/smMarketing
 import saasImg from "../../assets/servicesPageAssets/saasImg.png";
 import emailMarketingImg from "../../assets/servicesPageAssets/emailMarketingImg.png";
 import brandIdentityDesignImg from "../../assets/servicesPageAssets/brandDesignImg.png";
+import { Link } from "react-router-dom";
 
 const TheServices = () => {
   return (
@@ -27,8 +28,12 @@ const TheServices = () => {
               <h4>4+ Years</h4>
             </span>
             <div className="btns">
-              <button>DISCOVER MORE</button>
-              <button>SEE PROJECTS</button>
+              <Link to={"/services/web-design"}>
+                <button>DISCOVER MORE</button>
+              </Link>
+              <Link to={"/projects"} className="link-styles">
+                <button>SEE PROJECTS</button>
+              </Link>
             </div>
             <div className="keywords">
               <p>#Modern</p>

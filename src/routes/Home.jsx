@@ -10,6 +10,7 @@ import Projects from "../components/homePageComponents/Projects";
 import Testimonials from "../components/homePageComponents/Testimonials";
 import ContactMe from "../components/homePageComponents/ContactMe";
 import WhyHireMe from "../components/homePageComponents/WhyHireMe";
+import FAQ from "../components/homePageComponents/FAQ";
 
 const Home = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Home = () => {
       <Projects />
       <ProgrammingLanguages />
       <UIServices />
+      <FAQ />
       <Testimonials />
       <ContactMe />
     </Container>
@@ -33,7 +35,6 @@ const Home = () => {
 const Container = styled.div`
   color: var(--fontPrimaryColor);
   transition: 0.4s;
-  overflow-x: hidden;
 `;
 
 export default Home;

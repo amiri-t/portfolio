@@ -1,34 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import img from "../../assets/homePageAssets/skillsImg.png";
 import { AiOutlineCheck } from "react-icons/ai";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Skills = () => {
-  const { ref, inView } = useInView();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const animation = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      animation.start({
-        opacity: 1,
-        transition: { duration: 0.7, delay: 0.2 },
-        x: 0,
-      });
+    if (isInView) {
+      animation.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
 
-      setHasAnimated(true);
-    }
-    if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, x: 100 });
-    }
-  }, [inView, hasAnimated, animation]);
   return (
     <Container ref={ref}>
       <img src={img} alt="" />
-      <motion.div className="right" animate={animation}>
+      <motion.div
+        className="right"
+        variants={{
+          hidden: { opacity: 0, x: 180 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={animation}
+        transition={{ duration: 0.4, delay: 0.4, type: "spring" }}
+      >
         <h2 className="title">My Programming Skills</h2>
         <div className="rows">
           <div className="row">

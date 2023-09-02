@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const MyServices = () => {
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+  const animation3 = useAnimation();
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      animation.start({
-        opacity: 1,
-        transition: { duration: 0.7, delay: 0.2 },
-        y: 0,
-      });
-
-      setHasAnimated(true);
+    if (isInView) {
+      animation1.start("visible");
+      animation2.start("visible");
+      animation3.start("visible");
     }
-    if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, y: 100 });
-    }
-  }, [inView, hasAnimated, animation]);
+    // eslint-disable-next-line
+  }, [isInView]);
   return (
     <Container>
       <div className="items" ref={ref}>
         <div className="top">
-          <div className="item i1">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: -300 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{ duration: 1, delay: 0.4, type: "spring" }}
+            className="item i1"
+          >
             <h2>
               My Awesome <br /> <span>Services</span>
             </h2>
@@ -36,8 +41,8 @@ const MyServices = () => {
               on each of them!
             </p>
             <button>DISCOVER ALL</button>
-          </div>
-          <motion.div animate={animation} className="item i2">
+          </motion.div>
+          <motion.div className="item i2">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5596/5596612.png"
               alt=""
@@ -50,7 +55,7 @@ const MyServices = () => {
           </motion.div>
         </div>
         <div className="bottom">
-          <motion.div animate={animation} className="item i2">
+          <motion.div className="item i2">
             <img
               src="https://icons-for-free.com/iconfiles/png/512/color+web+design-131983707946616457.png"
               alt=""
@@ -63,14 +68,16 @@ const MyServices = () => {
             <button>SEE MORE</button>
           </motion.div>
 
-          <motion.div animate={animation} className="item i2 last">
+          <motion.div className="item i2 last">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5681/5681665.png"
               alt=""
             />
             <h2>SEO</h2>
             <p>Elevating online visibility through strategic SEO techniques.</p>
-            <button>SEE MORE</button>
+            <Link to={"/services"}>
+              <button>SEE MORE</button>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -78,7 +85,7 @@ const MyServices = () => {
   );
 };
 const Container = styled.div`
-  padding: 7em 2%;
+  padding: 10em 2%;
   background: var(--primaryBackgroundColor);
   .items {
     display: flex;

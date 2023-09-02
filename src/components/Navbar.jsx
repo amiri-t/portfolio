@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
 import logo from "../assets/personalLogoPng.png";
 import logoDm from "../assets/dmPersonalLogoPng.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Navbar = ({ theme, switchTheme }) => {
   const [toggle, setToggle] = useState(false);
@@ -13,6 +14,15 @@ const Navbar = ({ theme, switchTheme }) => {
   const [pos, setPos] = useState("top");
   const location = useLocation();
   const pathname = location.pathname;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+  const animation3 = useAnimation();
+  const animation4 = useAnimation();
+  const animation5 = useAnimation();
+  const animation6 = useAnimation();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,8 +61,21 @@ const Navbar = ({ theme, switchTheme }) => {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    if (isInView) {
+      animation1.start("visible");
+      animation2.start("visible");
+      animation3.start("visible");
+      animation4.start("visible");
+      animation5.start("visible");
+      animation6.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
+
   return (
     <Container
+      ref={ref}
       style={
         pos === "top"
           ? { background: "rgba(0, 0, 0, 0)" }
@@ -71,31 +94,99 @@ const Navbar = ({ theme, switchTheme }) => {
         className={toggle ? "nav-menu active" : "nav-menu"}
       >
         <Link to={"/"} className="link-styles">
-          <li className={activeTab === "home" ? "activeTab" : "nonActive"}>
+          <motion.li
+            variants={{
+              hidden: { opacity: 0, y: -70 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{
+              duration: 0.4,
+              delay: 0.4,
+              type: "spring",
+              bounce: 2,
+            }}
+            className={activeTab === "home" ? "activeTab" : "nonActive"}
+          >
             Home
-          </li>
+          </motion.li>
         </Link>
         <Link to={"/services"} className="link-styles">
-          <li className={activeTab === "services" ? "activeTab" : "nonActive"}>
+          <motion.li
+            variants={{
+              hidden: { opacity: 0, y: -70 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{
+              duration: 0.4,
+              delay: 0.6,
+              type: "spring",
+              bounce: 2,
+            }}
+            className={activeTab === "services" ? "activeTab" : "nonActive"}
+          >
             Services
-          </li>
+          </motion.li>
         </Link>
         <Link to={"/projects"} className="link-styles">
-          <li className={activeTab === "projects" ? "activeTab" : "nonActive"}>
+          <motion.li
+            variants={{
+              hidden: { opacity: 0, y: -70 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{
+              duration: 0.4,
+              delay: 0.8,
+              type: "spring",
+              bounce: 2,
+            }}
+            className={activeTab === "projects" ? "activeTab" : "nonActive"}
+          >
             Projects
-          </li>
+          </motion.li>
         </Link>
         <Link to={"/about-me"} className="link-styles">
-          <li className={activeTab === "about-me" ? "activeTab" : "nonActive"}>
+          <motion.li
+            variants={{
+              hidden: { opacity: 0, y: -70 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{
+              duration: 0.4,
+              delay: 1,
+              type: "spring",
+              bounce: 2,
+            }}
+            className={activeTab === "about-me" ? "activeTab" : "nonActive"}
+          >
             About Me
-          </li>
+          </motion.li>
         </Link>
         <Link to={"/contact-me"} className="link-styles">
-          <li
+          <motion.li
+            variants={{
+              hidden: { opacity: 0, y: -70 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation1}
+            transition={{
+              duration: 0.4,
+              delay: 1.2,
+              type: "spring",
+              bounce: 2,
+            }}
             className={activeTab === "contact-me" ? "activeTab" : "nonActive"}
           >
             Contact Me
-          </li>
+          </motion.li>
         </Link>
         <div className="toggleTheme" onClick={switchTheme}>
           {theme === "dark" ? (

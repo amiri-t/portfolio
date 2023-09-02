@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { RiDoubleQuotesR } from "react-icons/ri";
 import { motion } from "framer-motion";
@@ -6,23 +6,17 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
 const Testimonials = () => {
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation1 = useAnimation();
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      animation.start({
-        opacity: 1,
-        transition: { duration: 0.7, delay: 0.2 },
-        y: 0,
-      });
-      setHasAnimated(true);
+    if (isInView) {
+      animation1.start("visible");
     }
-    if (!inView && !hasAnimated) {
-      animation.start({ opacity: 0, y: 100 });
-    }
-  }, [inView, hasAnimated, animation]);
+    // eslint-disable-next-line
+  }, [isInView]);
   return (
     <Container>
       <div className="topSection">
@@ -33,7 +27,16 @@ const Testimonials = () => {
         </p>
       </div>
       <div className="bottomSection" ref={ref}>
-        <motion.div animate={animation} className="item">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+          className="item"
+        >
           <RiDoubleQuotesR className="icon" />
           <p>
             I needed a web app for my boxing club. I need a clinets app and an
@@ -51,7 +54,16 @@ const Testimonials = () => {
           </div>
         </motion.div>
 
-        <motion.div animate={animation} className="item">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
+          className="item"
+        >
           <RiDoubleQuotesR className="icon" />
           <p>
             Even tho it wasn't the best design idea for Amir, he made it look
@@ -68,7 +80,16 @@ const Testimonials = () => {
             </span>
           </div>
         </motion.div>
-        <motion.div animate={animation} className="item">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 1, type: "spring" }}
+          className="item"
+        >
           <RiDoubleQuotesR className="icon" />
           <p>
             I hired Amir like a month ago. A friend told me about him. So I
