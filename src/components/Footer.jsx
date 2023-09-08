@@ -41,6 +41,7 @@ const Footer = ({ theme }) => {
           <h3>Contact</h3>
           <p>+383 45 209 534</p>
           <p>tahiriamir49@gmail.com</p>
+          <p>amirisites@gmail.com</p>
           <p>Amir Tahiri</p>
         </div>
       </div>

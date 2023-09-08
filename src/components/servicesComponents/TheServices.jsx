@@ -6,6 +6,7 @@ import socailMediaMarketingImg from "../../assets/servicesPageAssets/smMarketing
 import saasImg from "../../assets/servicesPageAssets/saasImg.png";
 import emailMarketingImg from "../../assets/servicesPageAssets/emailMarketingImg.png";
 import brandIdentityDesignImg from "../../assets/servicesPageAssets/brandDesignImg.png";
+import socialMediaAdsImg from "../../assets/servicesPageAssets/socialMediaAdsImg.png";
 import { Link } from "react-router-dom";
 
 const TheServices = () => {
@@ -97,7 +98,7 @@ const TheServices = () => {
         <div className="service reversed">
           <img src={socailMediaMarketingImg} alt="" />
           <div>
-            <h2>Content Creation</h2>
+            <h2>Content Creation & Copywriting</h2>
             <p>
               Crafting compelling content tailored to your niche, I establish
               your brand as an authoritative voice. Consistent and valuable
@@ -170,8 +171,33 @@ const TheServices = () => {
             </div>
           </div>
         </div>
-
         <div className="service">
+          <img src={socialMediaAdsImg} alt="" />
+          <div>
+            <h2>Social Media Ads</h2>
+            <p>
+              My social media ad services drive exceptional growth. Through
+              precise targeting and engaging content, businesses experience up
+              to 70% expansion in reach, conversions, and brand presence,
+              amplifying their success.
+            </p>
+            <span>
+              <h3>Experience:</h3>
+              <h4>2+ Years</h4>
+            </span>
+            <div className="btns">
+              <button>DISCOVER MORE</button>
+            </div>
+            <div className="keywords">
+              <p>#ads</p>
+              <p>#socialMedia</p>
+              <p>#socialMediaAds</p>
+              <p>#facebookAds</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="service reversed">
           <img src={emailMarketingImg} alt="" />
           <div>
             <h2>Email Marketing</h2>

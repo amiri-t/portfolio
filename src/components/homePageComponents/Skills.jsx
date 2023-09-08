@@ -18,9 +18,10 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <Container ref={ref}>
+    <Container>
       <img src={img} alt="" />
       <motion.div
+        ref={ref}
         className="right"
         variants={{
           hidden: { opacity: 0, x: 180 },

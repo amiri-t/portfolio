@@ -17,7 +17,7 @@ const WhyHireMe = () => {
   }, [isInView]);
   return (
     <Container>
-      <div className="title" ref={ref}>
+      <div className="title">
         <h1>Why Hire Me</h1>
         <p>
           In this section I will provide you with some reasons to hire me to get
@@ -25,6 +25,7 @@ const WhyHireMe = () => {
         </p>
       </div>
       <motion.div
+        ref={ref}
         variants={{
           hidden: { opacity: 0, y: 200 },
           visible: { opacity: 1, y: 0 },

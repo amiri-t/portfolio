@@ -50,6 +50,7 @@ const Container = styled.div`
     }
     p {
       color: var(--fontSecondaryColor);
+      text-align: left;
     }
   }
   @media (max-width: 1150px) {

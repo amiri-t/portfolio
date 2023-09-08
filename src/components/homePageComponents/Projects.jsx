@@ -21,13 +21,14 @@ const Projects = () => {
 
   return (
     <Container>
-      <div className="title" ref={ref}>
+      <div className="title">
         <h1>Recent Projects</h1>
         <p>Exploring a Selection of My Diverse Creations</p>
       </div>
       <div className="projects">
         <Link to={"/projects/asites-agency"} className="link-styles">
           <motion.div
+            ref={ref}
             className="project"
             variants={{
               hidden: { opacity: 0, y: 200 },

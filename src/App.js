@@ -29,7 +29,10 @@ function App() {
 
         <Route path="/projects/:projectId" element={<SelectedProject />} />
 
-        <Route path="/services/web-design" element={<WebDesignPage />} />
+        <Route
+          path="/services/web-design"
+          element={<WebDesignPage theme={theme} />}
+        />
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />
     </div>
