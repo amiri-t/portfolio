@@ -59,9 +59,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>2+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/seo"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#traffic</p>
               <p>#topResults</p>
@@ -84,9 +86,14 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>4+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link
+              to={"/services/social-media-marketing"}
+              className="link-styles"
+            >
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#socialMedia</p>
               <p>#marketing</p>
@@ -109,9 +116,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>2+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/content-creation"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#contentCreation</p>
               <p>#videoEditing</p>
@@ -134,9 +143,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>2+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/branding-design"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#brand</p>
               <p>#brandDesign</p>
@@ -160,9 +171,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>2+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/saas"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#SaaS</p>
               <p>#software</p>
@@ -185,9 +198,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>2+ Years</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/social-media-ads"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#ads</p>
               <p>#socialMedia</p>
@@ -211,9 +226,11 @@ const TheServices = () => {
               <h3>Experience:</h3>
               <h4>1+ Year</h4>
             </span>
-            <div className="btns">
-              <button>DISCOVER MORE</button>
-            </div>
+            <Link to={"/services/email-marketing"} className="link-styles">
+              <div className="btns">
+                <button>DISCOVER MORE</button>
+              </div>
+            </Link>
             <div className="keywords">
               <p>#email</p>
               <p>#marketing</p>

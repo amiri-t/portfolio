@@ -83,6 +83,44 @@ const Container = styled.div`
   .bannerImg {
     width: 47%;
   }
+  @media (max-width: 920px) {
+    padding: 8em 3% 3em 3%;
+    .left {
+      h1 {
+        font-size: 2.3em;
+      }
+    }
+  }
+  @media (max-width: 730px) {
+    .left {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    padding: 5em 3% 3em 3%;
+    flex-direction: column;
+    .left {
+      text-align: center;
+      h1 {
+        font-size: 2em;
+      }
+    }
+    .bannerImg {
+      width: 70%;
+    }
+  }
+  @media (max-width: 440px) {
+    .left {
+      h1 {
+        font-size: 1.7em;
+      }
+    }
+    .bannerImg {
+      width: 90%;
+    }
+  }
 `;
 
 export default WebDesignBanner;

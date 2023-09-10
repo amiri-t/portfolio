@@ -8,20 +8,16 @@ const MyServices = () => {
   const isInView = useInView(ref, { once: true });
 
   const animation1 = useAnimation();
-  const animation2 = useAnimation();
-  const animation3 = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       animation1.start("visible");
-      animation2.start("visible");
-      animation3.start("visible");
     }
     // eslint-disable-next-line
   }, [isInView]);
   return (
     <Container>
-      <div className="items" ref={ref}>
+      <div className="items">
         <div className="top">
           <motion.div
             variants={{
@@ -42,7 +38,7 @@ const MyServices = () => {
             </p>
             <button>DISCOVER ALL</button>
           </motion.div>
-          <motion.div className="item i2">
+          <motion.div className="item i2" ref={ref}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/5596/5596612.png"
               alt=""
@@ -179,6 +175,7 @@ const Container = styled.div`
       .bottom {
         flex-direction: row;
         width: 90%;
+        margin-left: 2em;
       }
     }
   }
@@ -191,9 +188,14 @@ const Container = styled.div`
       .i1 {
         width: 90%;
       }
+      .i2 {
+        width: 80%;
+        margin-right: 1%;
+      }
       .bottom {
         flex-direction: column;
         width: 90%;
+        margin-left: 1.4em;
       }
     }
   }

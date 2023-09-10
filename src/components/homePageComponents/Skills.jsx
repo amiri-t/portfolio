@@ -245,26 +245,140 @@ const Container = styled.div`
       margin: auto;
     }
   }
-  @media (max-width: 620px) {
+  @media (max-width: 720px) {
     .right {
       width: 90%;
+    }
+  }
+  @media (max-width: 580px) {
+    padding: 7em 1%;
+    .right {
+      width: 99%;
     }
   }
   @media (max-width: 500px) {
     padding: 7em 1%;
     .right {
       width: 99%;
+      .rows {
+        .row {
+          h3 {
+            width: 120px;
+          }
+          span {
+            width: 170px;
+            div {
+              width: 170px;
+            }
+          }
+          :nth-child(2) {
+            span {
+              width: 170px;
+              div {
+                width: 168px;
+              }
+            }
+          }
+          :nth-child(3) {
+            span {
+              width: 170px;
+              div {
+                width: 163px;
+              }
+            }
+          }
+          :nth-child(4) {
+            span {
+              width: 170px;
+              div {
+                width: 158px;
+              }
+            }
+          }
+          :nth-child(5) {
+            span {
+              width: 170px;
+              div {
+                width: 150px;
+              }
+            }
+          }
+          :nth-child(6),
+          :nth-child(7),
+          :nth-child(8) {
+            span {
+              width: 170px;
+              div {
+                width: 166px;
+              }
+            }
+          }
+        }
+      }
     }
   }
   @media (max-width: 400px) {
-    padding: 7em 1%;
     .right {
-      width: 99%;
       .rows {
         gap: 2em;
         .row {
           flex-direction: column;
           gap: 4px;
+          span {
+            width: 90%;
+            div {
+              width: 99%;
+            }
+          }
+          :nth-child(2) {
+            span {
+              width: 90%;
+              div {
+                width: 98%;
+              }
+            }
+          }
+          :nth-child(3) {
+            span {
+              width: 90%;
+              div {
+                width: 94%;
+              }
+            }
+          }
+          :nth-child(4) {
+            span {
+              width: 90%;
+              div {
+                width: 88%;
+              }
+            }
+          }
+          :nth-child(5) {
+            span {
+              width: 90%;
+              div {
+                width: 80%;
+              }
+            }
+          }
+          :nth-child(6),
+          :nth-child(7) {
+            span {
+              width: 90%;
+              div {
+                width: 95%;
+              }
+            }
+          }
+          :nth-child(8) {
+            span {
+              width: 90%;
+              div {
+                width: 98%;
+              }
+            }
+          }
         }
       }
     }

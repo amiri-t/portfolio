@@ -24,18 +24,18 @@ const WhyHireMe = () => {
           you to high levels of success with my services.
         </p>
       </div>
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 200 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={animation}
-        transition={{ duration: 0.4, delay: 0.4, type: "spring" }}
-        className="items"
-      >
-        <div className="item">
+      <div className="items">
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 0.1, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>Seamless Scaling</h2>
           <p>
@@ -44,8 +44,17 @@ const WhyHireMe = () => {
             targeted digital strategies, I empower businesses to scale
             effectively and seize opportunities.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 0.4, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>Fusion of Creativity and Strategy</h2>
           <p>
@@ -54,8 +63,17 @@ const WhyHireMe = () => {
             thinking, ensuring a captivating online presence that captivates
             your audience.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 0.7, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>Proven Success</h2>
           <p>
@@ -64,8 +82,17 @@ const WhyHireMe = () => {
             base to brands that have conquered the digital realm, my track
             record speaks for itself.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 1, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>ROI-Driven Approach</h2>
           <p>
@@ -74,8 +101,17 @@ const WhyHireMe = () => {
             ensure your investment yields tangible returns through increased
             visibility and conversions.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 1.3, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>Tailored Solutions</h2>
           <p>
@@ -84,8 +120,17 @@ const WhyHireMe = () => {
             your brand identity and business goals, delivering a cohesive and
             impactful online experience.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 1.6, type: "spring" }}
+          className="item"
+        >
           <BsCheck2Circle className="icon" />
           <h2>Partnership for Growth</h2>
           <p>
@@ -94,8 +139,8 @@ const WhyHireMe = () => {
             guidance, insight, and expertise that contribute to your long-term
             success.
           </p>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </Container>
   );
 };

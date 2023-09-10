@@ -264,35 +264,6 @@ const WebDesignPage = ({ theme }) => {
 const Container = styled.div`
   width: 100%;
   color: var(--fontPrimaryColor);
-  .banner {
-    background: var(--backgroundGradient2);
-    transition: 0.4s;
-    padding: 8em 7% 3em 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    .left {
-      h1 {
-        font-size: 2.7em;
-        font-weight: 600;
-        line-height: 1.4em;
-        font-family: "Montserrat", cursive;
-        span {
-          font-family: "Comfortaa", cursive;
-          background: var(--gradientBackground);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-      p {
-        font-weight: 300;
-      }
-    }
-    .bannerImg {
-      width: 47%;
-    }
-  }
   .text {
     background: var(--backgroundGradient3);
     padding: 8em 7%;
@@ -322,9 +293,6 @@ const Container = styled.div`
       font-size: 7em;
       line-height: 1em;
       font-weight: 300;
-      background: var(--gradientBackground);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
   .features {

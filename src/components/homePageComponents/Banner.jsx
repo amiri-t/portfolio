@@ -6,17 +6,39 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <Container>
-      <motion.div
-        className="left"
-        animate={{ x: 0 }}
-        initial={{ x: -500 }}
-        transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
-      >
-        <h3>Hello there, my name is</h3>
-        <span>
+      <motion.div className="left">
+        <motion.h3
+          className="left"
+          animate={{ x: 0 }}
+          initial={{ x: -500 }}
+          transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}
+        >
+          Hello there, my name is
+        </motion.h3>
+        <motion.span
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{
+            duration: 0.7,
+            bounce: 0.3,
+            type: "spring",
+            delay: 0.7,
+          }}
+        >
           Amir <br /> <h3 className="ln">Tahiri</h3>
-        </span>
-        <h1>Web Designer & Developer</h1>
+        </motion.span>
+        <motion.h1
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 200, opacity: 0 }}
+          transition={{
+            duration: 1,
+            bounce: 0.3,
+            delay: 1.7,
+            type: "spring",
+          }}
+        >
+          Web Designer & Developer
+        </motion.h1>
       </motion.div>
       <motion.img
         src={bannerImg}

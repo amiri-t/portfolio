@@ -26,26 +26,35 @@ const UIServices = () => {
           digital experiences.
         </p>
       </div>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, x: -200 },
-          visible: { opacity: 1, x: 0 },
-        }}
-        initial="hidden"
-        animate={animation1}
-        transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
-        className="items"
-        ref={ref}
-      >
-        <div className="item">
+      <motion.div className="items">
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 0.1, type: "spring" }}
+          ref={ref}
+        >
           <img src={webUIicon} alt="" />
           <h3>Website UI</h3>
           <p>
             Crafting intuitive and engaging user interfaces that guide seamless
             digital journeys.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/5978/5978228.png"
             alt=""
@@ -55,8 +64,17 @@ const UIServices = () => {
             Breathing new life into digital spaces through strategic and
             impactful redesigns.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png"
             alt=""
@@ -66,8 +84,17 @@ const UIServices = () => {
             Ensuring flawless functionality and aesthetics across devices with
             responsive design.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 1, type: "spring" }}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png"
             alt=""
@@ -77,8 +104,17 @@ const UIServices = () => {
             Elevating user experiences through sleek and intuitive mobile
             interfaces.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 1.4, type: "spring" }}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/4053/4053022.png"
             alt=""
@@ -88,8 +124,17 @@ const UIServices = () => {
             Designing immersive and efficient user interfaces for dynamic web
             applications.
           </p>
-        </div>
-        <div className="item">
+        </motion.div>
+        <motion.div
+          className="item"
+          variants={{
+            hidden: { opacity: 0, x: -200 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={animation1}
+          transition={{ duration: 0.7, delay: 1.7, type: "spring" }}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/1454/1454776.png"
             alt=""
@@ -99,7 +144,7 @@ const UIServices = () => {
             Infusing websites with captivating animations that enhance
             interactivity and engagement.
           </p>
-        </div>
+        </motion.div>
       </motion.div>
     </Container>
   );

@@ -18,11 +18,6 @@ const Navbar = ({ theme, switchTheme }) => {
   const isInView = useInView(ref, { once: true });
 
   const animation1 = useAnimation();
-  const animation2 = useAnimation();
-  const animation3 = useAnimation();
-  const animation4 = useAnimation();
-  const animation5 = useAnimation();
-  const animation6 = useAnimation();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -64,11 +59,6 @@ const Navbar = ({ theme, switchTheme }) => {
   useEffect(() => {
     if (isInView) {
       animation1.start("visible");
-      animation2.start("visible");
-      animation3.start("visible");
-      animation4.start("visible");
-      animation5.start("visible");
-      animation6.start("visible");
     }
     // eslint-disable-next-line
   }, [isInView]);

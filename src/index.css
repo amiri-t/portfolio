@@ -82,7 +82,7 @@ code {
   --primaryColorLight: #73bbc9b6;
   --secondaryColor: #f1d4e5;
   --primaryBackgroundColor: #040c18;
-  --secondaryBackgroundColor: #313131;
+  --secondaryBackgroundColor: #091527;
   --trBackgroundColor: #040c18bd;
   --fontPrimaryColor: rgb(243, 243, 243);
   --fontPrimaryColorOpp: #070707;
@@ -90,8 +90,8 @@ code {
   --scrollbarColor: #040c18;
   --bgColor2: #142b4b;
   --shadowColor: #2163aaf3;
-  --shadowColor1: #051f3a52;
-  --shadowColor2: #061020;
+  --shadowColor1: #0c243f52;
+  --shadowColor2: #040b16;
 
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
