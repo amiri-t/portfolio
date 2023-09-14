@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import bannerImg from "../../assets/servicesPageAssets/webDesignBannerImg.png";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const WebDesignBanner = () => {
   return (

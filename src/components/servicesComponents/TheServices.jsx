@@ -73,7 +73,7 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service">
-          <img src={socailMediaMarketingImg} alt="" />
+          <img src={socialMediaAdsImg} alt="" />
           <div>
             <h2>Social Media Marketing</h2>
             <p>
@@ -103,7 +103,10 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service reversed">
-          <img src={socailMediaMarketingImg} alt="" />
+          <img
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/content-creation-4291890-3569923.png"
+            alt=""
+          />
           <div>
             <h2>Content Creation & Copywriting</h2>
             <p>
@@ -185,34 +188,6 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service">
-          <img src={socialMediaAdsImg} alt="" />
-          <div>
-            <h2>Social Media Ads</h2>
-            <p>
-              My social media ad services drive exceptional growth. Through
-              precise targeting and engaging content, businesses experience up
-              to 70% expansion in reach, conversions, and brand presence,
-              amplifying their success.
-            </p>
-            <span>
-              <h3>Experience:</h3>
-              <h4>2+ Years</h4>
-            </span>
-            <Link to={"/services/social-media-ads"} className="link-styles">
-              <div className="btns">
-                <button>DISCOVER MORE</button>
-              </div>
-            </Link>
-            <div className="keywords">
-              <p>#ads</p>
-              <p>#socialMedia</p>
-              <p>#socialMediaAds</p>
-              <p>#facebookAds</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="service reversed">
           <img src={emailMarketingImg} alt="" />
           <div>
             <h2>Email Marketing</h2>

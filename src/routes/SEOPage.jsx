@@ -6,9 +6,9 @@ import SEOServices from "../components/servicesComponents/SEOServices";
 import SEOTypes from "../components/servicesComponents/SEOTypes";
 
 const SEOPage = () => {
-  //       useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
