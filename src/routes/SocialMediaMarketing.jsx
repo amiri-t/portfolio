@@ -6,9 +6,9 @@ import SMMGuarantees from "../components/servicesComponents/SMMGuarantees";
 import SMMServices from "../components/servicesComponents/SMMServices";
 
 const SocialMediaMarketing = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

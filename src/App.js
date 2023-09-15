@@ -11,6 +11,7 @@ import SelectedProject from "./routes/SelectedProject";
 import WebDesignPage from "./routes/WebDesignPage";
 import SEOPage from "./routes/SEOPage";
 import SocialMediaMarketing from "./routes/SocialMediaMarketing";
+import ContentCreationPage from "./routes/ContentCreationPage";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -40,6 +41,10 @@ function App() {
         <Route
           path="/services/social-media-marketing"
           element={<SocialMediaMarketing />}
+        />
+        <Route
+          path="/services/content-creation"
+          element={<ContentCreationPage />}
         />
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />

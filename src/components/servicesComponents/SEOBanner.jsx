@@ -90,6 +90,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2em;
+  background: var(--backgroundGradient4);
   img {
     width: 40%;
     max-width: 740px;
