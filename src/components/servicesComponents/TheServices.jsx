@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import webDesignImg from "../../assets/servicesPageAssets/webDesignImg.png";
 import SEOimg from "../../assets/servicesPageAssets/seoImg.png";
-import socailMediaMarketingImg from "../../assets/servicesPageAssets/smMarketingImg.png";
-import saasImg from "../../assets/servicesPageAssets/saasImg.png";
 import emailMarketingImg from "../../assets/servicesPageAssets/emailMarketingImg.png";
 import brandIdentityDesignImg from "../../assets/servicesPageAssets/brandDesignImg.png";
 import socialMediaAdsImg from "../../assets/servicesPageAssets/socialMediaAdsImg.png";
@@ -160,34 +158,6 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service reversed">
-          <img src={saasImg} alt="" />
-          <div>
-            <h2>SaaS Design and Development</h2>
-            <p>
-              Crafting intuitive and efficient Software as a Service (SaaS)
-              solutions, I empower businesses to streamline operations and offer
-              unique value. A well-designed SaaS platform not only optimizes
-              internal processes but also attracts new clients seeking
-              innovative solutions.
-            </p>
-            <span>
-              <h3>Experience:</h3>
-              <h4>2+ Years</h4>
-            </span>
-            <Link to={"/services/saas"} className="link-styles">
-              <div className="btns">
-                <button>DISCOVER MORE</button>
-              </div>
-            </Link>
-            <div className="keywords">
-              <p>#SaaS</p>
-              <p>#software</p>
-              <p>#service</p>
-              <p>#webApp</p>
-            </div>
-          </div>
-        </div>
-        <div className="service">
           <img src={emailMarketingImg} alt="" />
           <div>
             <h2>Email Marketing</h2>

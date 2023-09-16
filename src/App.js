@@ -12,6 +12,7 @@ import WebDesignPage from "./routes/WebDesignPage";
 import SEOPage from "./routes/SEOPage";
 import SocialMediaMarketing from "./routes/SocialMediaMarketing";
 import ContentCreationPage from "./routes/ContentCreationPage";
+import BrandingDesign from "./routes/BrandingDesign";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -46,6 +47,12 @@ function App() {
           path="/services/content-creation"
           element={<ContentCreationPage />}
         />
+        <Route path="/services/branding-design" element={<BrandingDesign />} />
+
+        {/* <img
+        src="https://cdn3d.iconscout.com/3d/premium/thumb/digital-marketing-5467935-4568166.png"
+        alt=""
+      /> */}
       </Routes>
       <Footer switchTheme={switchTheme} theme={theme} />
     </div>
