@@ -13,6 +13,9 @@ const SelectedProject = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    document.title = "Amir Tahiri - Project | Portfolio";
+  }, []);
   const {
     aSitesAgencyData,
     traveloData,

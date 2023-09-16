@@ -7,8 +7,24 @@ import { BiLogoUpwork } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
+// import { InlineWidget, Calendly } from "react-calendly";
 
 const Footer = ({ theme }) => {
+  // Calendly.initInlineWidget({
+  //   url: "https://calendly.com/amiri-t",
+  //   utm: {
+  //     utmChampaign: "Amiri",
+  //   },
+  // });
+  const openCalendlyPopup = () => {
+    // Replace 'YOUR_POPUP_LINK' with the actual Calendly pop-up link
+    window.open(
+      "https://calendly.com/amiri-t/talk-with-amir",
+      "calendlyPopup",
+      "width=800,height=600"
+    );
+  };
+
   return (
     <Container>
       <Link to={"/"} className="link-styles">
@@ -20,22 +36,40 @@ const Footer = ({ theme }) => {
           )}
           <p>Crafting Digital Experiences, One Line of Code at a Time</p>
           <div className="iconRow">
-            <AiFillInstagram className="icon" />
+            <Link
+              to={"https://www.instagram.com/amir.tahiri_/"}
+              target="_blank"
+            >
+              <AiFillInstagram className="icon" />
+            </Link>
             <AiFillTwitterCircle className="icon" />
             <BiLogoUpwork className="icon" />
             <SiGmail className="icon" />
-            <AiFillGithub className="icon" />
+            <Link to={"https://github.com/amiri-t"} target="_blank">
+              <AiFillGithub className="icon" />
+            </Link>
           </div>
+          <button onClick={openCalendlyPopup}>BOOK A FREE CALL WITH ME</button>
         </div>
       </Link>
       <div className="columns">
         <div className="column">
           <h3>Links</h3>
-          <p>Home</p>
-          <p>Services</p>
-          <p>Projects</p>
-          <p>About Me</p>
-          <p>Contact Me</p>
+          <Link to={"/"} className="link-styles">
+            <p>Home</p>
+          </Link>
+          <Link to={"/services"} className="link-styles">
+            <p>Services</p>
+          </Link>
+          <Link to={"/projects"} className="link-styles">
+            <p>Projects</p>
+          </Link>
+          <Link to={"/about-me"} className="link-styles">
+            <p>About Me</p>
+          </Link>
+          <Link to={"/contact-me"} className="link-styles">
+            <p>Contact Me</p>
+          </Link>
         </div>
         <div className="column">
           <h3>Contact</h3>
@@ -60,6 +94,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: flex-start;
     img {
       width: 200px;
     }
@@ -74,6 +109,19 @@ const Container = styled.div`
           color: var(--fontPrimaryColor);
           transform: scale(1.1);
         }
+      }
+    }
+    button {
+      font-size: 17px;
+      padding: 14px 12px;
+      border: none;
+      background: var(--primaryColor);
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.4s;
+      :hover {
+        box-shadow: 0 0 7px 2px var(--primaryColor);
       }
     }
   }

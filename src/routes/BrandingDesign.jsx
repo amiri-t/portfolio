@@ -5,9 +5,14 @@ import BrandingDesignBanner from "../components/homePageComponents/BrandingDesig
 import BrandingServices from "../components/servicesComponents/BrandingServices";
 
 const BrandingDesign = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    document.title = "Amir Tahiri - Branding Design | Portfolio";
+  }, []);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

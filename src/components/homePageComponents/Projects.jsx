@@ -120,6 +120,7 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1em;
     margin-top: 2em;
     .project {
@@ -127,9 +128,12 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       cursor: pointer;
 
       img {
+        margin: auto;
+        display: flex;
         width: 100%;
         box-shadow: 12px 12px 19px var(--shadowColor1),
           -12px -12px 19px var(--shadowColor2);
@@ -167,15 +171,21 @@ const Container = styled.div`
   }
   @media (max-width: 810px) {
     .projects {
+      flex-direction: column;
       .project {
-        width: 80%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 8%;
       }
     }
   }
-  @media (max-width: 810px) {
+  @media (max-width: 600px) {
+    padding: 7em 4%;
     .projects {
       .project {
-        width: 93%;
+        width: 99%;
+        padding: 0 1%;
       }
     }
   }

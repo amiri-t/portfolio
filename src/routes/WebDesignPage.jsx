@@ -12,11 +12,17 @@ import socialMediaImg from "../assets/servicesPageAssets/socialMediaImg.png";
 import animationsImg from "../assets/servicesPageAssets/animationsImg.png";
 import WebDesignBanner from "../components/servicesComponents/WebDesignBanner";
 import { Link } from "react-router-dom";
+import WebServices from "../components/servicesComponents/WebServices";
 
 const WebDesignPage = ({ theme }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    document.title = "Amir Tahiri - Web Design & Development | Portfolio";
+  }, []);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -56,60 +62,7 @@ const WebDesignPage = ({ theme }) => {
           <img src={webDesignExamplesD} alt="" />
         )}
       </div>
-      <div className="features">
-        <div className="feature">
-          <img src={UIimg} alt="" />
-          <h2>UI & UX</h2>
-          <p>
-            Skilled in crafting user-centric interfaces and experiences for
-            digital products, ensuring intuitive interactions and aesthetic
-            appeal.
-          </p>
-        </div>
-        <div className="feature">
-          <img src={respImg} alt="" />
-          <h2>Responsive Design</h2>
-          <p>
-            I always design my websites to work well on various devices and
-            screen sizes, including desktops, tablets, and smartphones.
-          </p>
-        </div>
-        <div className="feature">
-          <img src={accessibilityImg} alt="" />
-          <h2>Accessibility</h2>
-          <p>
-            I'm committed to making websites accessible to everyone, including
-            those with disabilities, by following accessibility guidelines.
-          </p>
-        </div>
-        <div className="feature">
-          <img src={HQimg} alt="" />
-          <h2>High-Quality Content</h2>
-          <p>
-            Content is king. I ensure that your website provides valuable,
-            informative, and engaging content that meets the needs of your
-            target audience.
-          </p>
-        </div>
-        <div className="feature">
-          <img src={socialMediaImg} alt="" />
-          <h2>Social Media Integration</h2>
-          <p>
-            I understand the importance of social media in today's digital
-            landscape, keeping visitors connected and informed about the latest
-            news, posts, or comments.
-          </p>
-        </div>
-        <div className="feature">
-          <img src={animationsImg} alt="" />
-          <h2>Animations and Transitions</h2>
-          <p>
-            Recognizing the impact of visual elements on user experience, I
-            incorporate carefully curated loading animations and transitions
-            into websites.
-          </p>
-        </div>
-      </div>
+      <WebServices />
       <div className="websiteTypes">
         <div className="type">
           <div className="details">

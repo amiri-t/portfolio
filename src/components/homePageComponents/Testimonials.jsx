@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Testimonials = () => {
   const ref = useRef(null);
@@ -26,8 +24,9 @@ const Testimonials = () => {
           When my clinet is happy, I'm even happier.
         </p>
       </div>
-      <div className="bottomSection" ref={ref}>
+      <div className="bottomSection">
         <motion.div
+          ref={ref}
           variants={{
             hidden: { opacity: 0, y: 200 },
             visible: { opacity: 1, y: 0 },

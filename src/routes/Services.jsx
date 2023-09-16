@@ -7,6 +7,9 @@ const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    document.title = "Amir Tahiri - Services | Portfolio";
+  }, []);
   return (
     <Container>
       <ServicesBanner />

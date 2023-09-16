@@ -9,6 +9,11 @@ const SEOPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    document.title = "Amir Tahiri - SEO | Portfolio";
+  }, []);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

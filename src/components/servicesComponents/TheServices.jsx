@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import webDesignImg from "../../assets/servicesPageAssets/webDesignImg.png";
 import SEOimg from "../../assets/servicesPageAssets/seoImg.png";
-import emailMarketingImg from "../../assets/servicesPageAssets/emailMarketingImg.png";
 import brandIdentityDesignImg from "../../assets/servicesPageAssets/brandDesignImg.png";
 import socialMediaAdsImg from "../../assets/servicesPageAssets/socialMediaAdsImg.png";
 import { Link } from "react-router-dom";
@@ -157,33 +156,6 @@ const TheServices = () => {
             </div>
           </div>
         </div>
-        <div className="service reversed">
-          <img src={emailMarketingImg} alt="" />
-          <div>
-            <h2>Email Marketing</h2>
-            <p>
-              Crafting personalized and targeted email campaigns that nurture
-              leads, foster client relationships, and promote special offers.
-              Email marketing keeps your brand in the forefront of clients'
-              minds, resulting in higher engagement and conversions.
-            </p>
-            <span>
-              <h3>Experience:</h3>
-              <h4>1+ Year</h4>
-            </span>
-            <Link to={"/services/email-marketing"} className="link-styles">
-              <div className="btns">
-                <button>DISCOVER MORE</button>
-              </div>
-            </Link>
-            <div className="keywords">
-              <p>#email</p>
-              <p>#marketing</p>
-              <p>#promotions</p>
-              <p>#newclients</p>
-            </div>
-          </div>
-        </div>
       </div>
     </Container>
   );
@@ -279,7 +251,8 @@ const Container = styled.div`
         }
       }
       img {
-        max-width: 570px;
+        width: 50%;
+        max-width: 700px;
       }
     }
     .reversed {
@@ -321,7 +294,7 @@ const Container = styled.div`
           }
         }
         img {
-          width: 400px;
+          width: 370px;
         }
       }
     }
@@ -331,9 +304,7 @@ const Container = styled.div`
     .services {
       .service {
         img {
-          width: 90%;
-        }
-        div {
+          width: 80%;
         }
       }
     }

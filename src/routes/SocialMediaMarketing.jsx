@@ -9,6 +9,9 @@ const SocialMediaMarketing = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    document.title = "Amir Tahiri - Social Media Marketing | Portfolio";
+  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

@@ -36,7 +36,9 @@ const MyServices = () => {
               These are 3 of my main services I offer, with years of experience
               on each of them!
             </p>
-            <button>DISCOVER ALL</button>
+            <Link to={"/services"} className="link-styles">
+              <button>DISCOVER ALL</button>
+            </Link>
           </motion.div>
           <motion.div className="item i2" ref={ref}>
             <img
@@ -47,7 +49,6 @@ const MyServices = () => {
             <p>
               Transforming concepts into fully functional, responsive websites.
             </p>
-            <button>SEE MORE</button>
           </motion.div>
         </div>
         <div className="bottom">
@@ -61,7 +62,6 @@ const MyServices = () => {
               Crafting visually captivating and user-centric UI & UX designs
               that breathe life into digital spaces.
             </p>
-            <button>SEE MORE</button>
           </motion.div>
 
           <motion.div className="item i2 last">
@@ -71,9 +71,7 @@ const MyServices = () => {
             />
             <h2>SEO</h2>
             <p>Elevating online visibility through strategic SEO techniques.</p>
-            <Link to={"/services"}>
-              <button>SEE MORE</button>
-            </Link>
+            <Link to={"/services"}></Link>
           </motion.div>
         </div>
       </div>

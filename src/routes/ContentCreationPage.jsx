@@ -8,6 +8,11 @@ const ContentCreationPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    document.title = "Amir Tahiri - Content Creation | Portfolio";
+  }, []);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

@@ -13,10 +13,38 @@ import { MdEmail } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
 import { motion } from "framer-motion";
+import CV from "../assets/CV.pdf";
+import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 const ContactMe = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "portfolio-contact",
+        "template_q1gkjrc",
+        e.target,
+        "nxWVeDl0nBiSEU-yp"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const openCalendlyPopup = () => {
+    window.open(
+      "https://calendly.com/amiri-t/talk-with-amir",
+      "calendlyPopup",
+      "width=800,height=600"
+    );
+  };
+  useEffect(() => {
+    document.title = "Amir Tahiri - Contact Me | Portfolio";
   }, []);
   return (
     <Container>
@@ -29,48 +57,95 @@ const ContactMe = () => {
         <div className="item">
           <HiLocationMarker className="icon" />
           <h3>LOCATION</h3>
-          <p>
-            Podujeva <br />
-            Kosovo
-          </p>
+          <p>Podujeva, Kosovo</p>
+          <button>
+            <a href={CV} download={"amiri-cv.pdf"} className="link-styles">
+              DOWNLOAD CV
+            </a>
+          </button>
         </div>
         <div className="item">
           <BsFillTelephoneFill className="icon" />
           <h3>PHONE NUMBER</h3>
           <p>+383 45 209 534</p>
+          <button onClick={openCalendlyPopup}>BOOK A CALL</button>
         </div>
         <div className="item socials">
           <h3>PERSONAL SOCIALS</h3>
           <div>
-            <BsInstagram className="icon" />
-            <AiFillGithub className="icon" />
-            <SiUpwork className="icon" />
-            <MdEmail className="icon" />
-            <BsDribbble className="icon" />
+            <Link
+              to={"https://www.instagram.com/amir.tahiri_/"}
+              target="_blank"
+            >
+              <BsInstagram className="icon" />
+            </Link>
+            <Link to={"https://github.com/amiri-t"} target="_blank">
+              <AiFillGithub className="icon" />
+            </Link>
+            <Link
+              to={"https://www.upwork.com/workwith/amiris2"}
+              target="_blank"
+            >
+              <SiUpwork className="icon" />
+            </Link>
+            <Link
+              to={
+                "https://mail.google.com/mail/?view=cm&fs=1&to=tahiriamir49@gmail.com"
+              }
+              target="_blank"
+            >
+              <MdEmail className="icon" />
+            </Link>
+            <Link to={"https://dribbble.com/amirii"} target="_blank">
+              <BsDribbble className="icon" />
+            </Link>
           </div>
         </div>
         <div className="item socials">
           <h3>BUSINESS SOCIALS</h3>
           <div>
-            <BsInstagram className="icon" />
-            <MdEmail className="icon" />
-            <BsDribbble className="icon" />
-            <BsYoutube className="icon" />
-            <BsPinterest className="icon" />
-            <BsFacebook className="icon" />
+            <Link to={"https://www.instagram.com/amirisites/"} target="_blank">
+              <BsInstagram className="icon" />
+            </Link>
+            <Link
+              to={
+                "https://gmail.google.com/mail/?view=cm&fs=1&to=amirisites@gmail.com"
+              }
+              target="_blank"
+            >
+              <MdEmail className="icon" />
+            </Link>
+            <Link to={"https://dribbble.com/amirii"} target="_blank">
+              <BsDribbble className="icon" />
+            </Link>
+            <Link to={"https://www.youtube.com/@amirisites"} target="_blank">
+              <BsYoutube className="icon" />
+            </Link>
+            <Link to={"https://www.pinterest.com/amirisites/"} target="_blank">
+              <BsPinterest className="icon" />
+            </Link>
+            <Link
+              to={"https://www.facebook.com/profile.php?id=100092425893570"}
+              target="_blank"
+            >
+              <BsFacebook className="icon" />
+            </Link>
           </div>
         </div>
       </motion.div>
-      <form>
+      <form onSubmit={sendEmail}>
         <h2>LET'S TALK</h2>
-        <input type="text" placeholder="Enter Your Name..." />
-        <input type="email" placeholder="Enter Your Email..." />
+        <input type="text" name="name" placeholder="Enter Your Name..." />
+        <input type="email" name="email" placeholder="Enter Your Email..." />
         <textarea
+          name="message"
           cols="30"
           rows="10"
           placeholder="Enter Your Message..."
         ></textarea>
-        <button>SUBMIT</button>
+        <button type="submit" onClick={() => alert("Email Sent")}>
+          SUBMIT
+        </button>
       </form>
     </Container>
   );
@@ -122,6 +197,7 @@ const Container = styled.div`
           }
         }
       }
+
       h3 {
         font-weight: 500;
       }
@@ -131,6 +207,19 @@ const Container = styled.div`
       }
       p {
         color: gray;
+      }
+      button {
+        font-size: 17px;
+        padding: 14px 12px;
+        border: none;
+        background: none;
+        border-bottom: 2px solid var(--fontPrimaryColor);
+        cursor: pointer;
+        transition: 0.4s;
+        color: var(--fontPrimaryColor);
+        :hover {
+          background: var(--secondaryBackgroundColor);
+        }
       }
     }
   }
@@ -174,6 +263,7 @@ const Container = styled.div`
       outline: none;
       font-size: 16px;
       width: 100%;
+      color: var(--fontPrimaryColor);
     }
     button {
       margin-top: 1em;

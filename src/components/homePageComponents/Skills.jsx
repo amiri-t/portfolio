@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import img from "../../assets/homePageAssets/skillsImg.png";
+import CV from "../../assets/CV.pdf";
 import { AiOutlineCheck } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -98,6 +99,11 @@ const Skills = () => {
             <h4>98%</h4>
           </div>
         </div>
+        <button>
+          <a href={CV} download={"amiri-cv.pdf"} className="link-styles">
+            DOWNLOAD CV
+          </a>
+        </button>
       </motion.div>
     </Container>
   );
@@ -210,15 +216,15 @@ const Container = styled.div`
     }
     button {
       font-size: 17px;
-      background: var(--fontPrimaryColor);
-      color: var(--primaryBackgroundColor);
       padding: 14px 12px;
       border: none;
+      background: none;
+      border-bottom: 2px solid var(--fontPrimaryColor);
       margin-top: 17px;
       cursor: pointer;
       transition: 0.4s;
       :hover {
-        box-shadow: 0 0 10px 3px var(--shadowColor);
+        background: var(--secondaryBackgroundColor);
       }
     }
   }

@@ -4,6 +4,13 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const WhyHireMe = () => {
+  const openCalendlyPopup = () => {
+    window.open(
+      "https://calendly.com/amiri-t/talk-with-amir",
+      "calendlyPopup",
+      "width=800,height=600"
+    );
+  };
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -140,6 +147,7 @@ const WhyHireMe = () => {
             success.
           </p>
         </motion.div>
+        <button onClick={openCalendlyPopup}>BOOK A CALL</button>
       </div>
     </Container>
   );
@@ -189,6 +197,19 @@ const Container = styled.div`
       p {
         font-weight: 300;
         color: var(--fontSecondaryColor);
+      }
+    }
+    button {
+      font-size: 17px;
+      padding: 14px 12px;
+      border: none;
+      background: var(--primaryColor);
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.4s;
+      :hover {
+        box-shadow: 0 0 7px 2px var(--primaryColor);
       }
     }
   }

@@ -1,11 +1,24 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import CV from "../assets/CV.pdf";
 
 const AboutMe = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    document.title = "Amir Tahiri - About Me | Portfolio";
+  }, []);
+
+  const openCalendlyPopup = () => {
+    window.open(
+      "https://calendly.com/amiri-t/talk-with-amir",
+      "calendlyPopup",
+      "width=800,height=600"
+    );
+  };
   return (
     <Container>
       <motion.div
@@ -23,7 +36,7 @@ const AboutMe = () => {
       <div className="items">
         <div className="item">
           <p>
-            Hello, I'm Amir, a passionate and dedicated web designer and
+            Hello, My name is Amir, a passionate and dedicated web designer and
             developer. With a flair for creativity and a knack for innovation,
             I've embarked on a journey to craft compelling digital experiences
             that leave a lasting impact.
@@ -58,7 +71,14 @@ const AboutMe = () => {
             unlock the full potential of your business.
           </p>
         </div>
-        <button>HIRE ME</button>
+        <div className="btns">
+          <button>
+            <a href={CV} download={"amiri-cv.pdf"} className="link-styles">
+              DOWNLOAD CV
+            </a>
+          </button>
+          <button onClick={openCalendlyPopup}>BOOK A CALL</button>
+        </div>
       </div>
     </Container>
   );
@@ -99,16 +119,26 @@ const Container = styled.div`
       }
     }
     button {
-      margin-top: 1em;
       font-size: 17px;
-      background: var(--fontPrimaryColor);
-      color: var(--primaryBackgroundColor);
-      padding: 10px 12px;
+      padding: 14px 12px;
       border: none;
+      background: none;
+      border-bottom: 2px solid var(--fontPrimaryColor);
+      margin-top: 17px;
       cursor: pointer;
       transition: 0.4s;
+      margin: 10px;
       :hover {
-        box-shadow: 0 0 10px 3px var(--shadowColor);
+        background: var(--secondaryBackgroundColor);
+      }
+      :nth-child(2) {
+        background: var(--primaryColor);
+        color: white;
+        transition: 0.4s;
+        border: none;
+        :hover {
+          box-shadow: 0 0 7px 2px var(--primaryColor);
+        }
       }
     }
   }

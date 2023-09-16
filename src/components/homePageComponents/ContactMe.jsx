@@ -12,11 +12,26 @@ import {
 import { MdEmail } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import CV from "../../assets/CV.pdf";
+import emailjs from "@emailjs/browser";
 
 const ContactMeComp = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "portfolio-contact",
+        "template_q1gkjrc",
+        e.target,
+        "nxWVeDl0nBiSEU-yp"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  };
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,9 +43,18 @@ const ContactMeComp = () => {
     }
     // eslint-disable-next-line
   }, [isInView]);
+
+  const openCalendlyPopup = () => {
+    window.open(
+      "https://calendly.com/amiri-t/talk-with-amir",
+      "calendlyPopup",
+      "width=800,height=600"
+    );
+  };
   return (
-    <Container ref={ref}>
+    <Container>
       <motion.div
+        ref={ref}
         variants={{
           hidden: { opacity: 0, y: 200 },
           visible: { opacity: 1, y: 0 },
@@ -43,15 +67,18 @@ const ContactMeComp = () => {
         <div className="item">
           <HiLocationMarker className="icon" />
           <h3>LOCATION</h3>
-          <p>
-            Podujeva <br />
-            Kosovo
-          </p>
+          <p>Podujeva, Kosovo</p>
+          <button>
+            <a href={CV} download={"amiri-cv.pdf"} className="link-styles">
+              DOWNLOAD CV
+            </a>
+          </button>
         </div>
         <div className="item">
           <BsFillTelephoneFill className="icon" />
           <h3>PHONE NUMBER</h3>
           <p>+383 45 209 534</p>
+          <button onClick={openCalendlyPopup}>BOOK A CALL</button>
         </div>
         <div className="item socials">
           <h3>PERSONAL SOCIALS</h3>
@@ -74,16 +101,19 @@ const ContactMeComp = () => {
           </div>
         </div>
       </motion.div>
-      <form>
+      <form onSubmit={sendEmail}>
         <h2>LET'S TALK</h2>
-        <input type="text" placeholder="Enter Your Name..." />
-        <input type="email" placeholder="Enter Your Email..." />
+        <input type="text" name="name" placeholder="Enter Your Name..." />
+        <input type="email" name="email" placeholder="Enter Your Email..." />
         <textarea
+          name="message"
           cols="30"
           rows="10"
           placeholder="Enter Your Message..."
         ></textarea>
-        <button>SUBMIT</button>
+        <button type="submit" onClick={() => alert("Email Sent")}>
+          SUBMIT
+        </button>
       </form>
     </Container>
   );
@@ -145,6 +175,19 @@ const Container = styled.div`
       p {
         color: gray;
       }
+      button {
+        font-size: 17px;
+        padding: 14px 12px;
+        border: none;
+        background: none;
+        border-bottom: 2px solid var(--fontPrimaryColor);
+        color: var(--fontPrimaryColor);
+        cursor: pointer;
+        transition: 0.4s;
+        :hover {
+          background: var(--secondaryBackgroundColor);
+        }
+      }
     }
   }
   form {
@@ -187,6 +230,7 @@ const Container = styled.div`
       outline: none;
       font-size: 16px;
       width: 100%;
+      color: var(--fontPrimaryColor);
     }
     button {
       margin-top: 1em;
@@ -197,7 +241,6 @@ const Container = styled.div`
       border: none;
       cursor: pointer;
       transition: 0.4s;
-      border-radius: 10px;
       :hover {
         box-shadow: 0 0 10px 3px var(--shadowColor);
       }
