@@ -43,7 +43,7 @@ const MyServices = () => {
           <motion.div className="item i2" ref={ref}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/5596/5596612.png"
-              alt=""
+              alt="Amir Tahiri Portfolio website development image"
             />
             <h2>Development</h2>
             <p>
@@ -55,7 +55,7 @@ const MyServices = () => {
           <motion.div className="item i2">
             <img
               src="https://icons-for-free.com/iconfiles/png/512/color+web+design-131983707946616457.png"
-              alt=""
+              alt="Amir Tahiri Portfolio website design image"
             />
             <h2>Design</h2>
             <p>
@@ -67,7 +67,7 @@ const MyServices = () => {
           <motion.div className="item i2 last">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5681/5681665.png"
-              alt=""
+              alt="Amir Tahiri Portfolio website seo image"
             />
             <h2>SEO</h2>
             <p>Elevating online visibility through strategic SEO techniques.</p>

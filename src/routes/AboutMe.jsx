@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import CV from "../assets/CV.pdf";
+import CV from "../assets/MyCV.pdf";
 
 const AboutMe = () => {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import img from "../../assets/homePageAssets/skillsImg.png";
-import CV from "../../assets/CV.pdf";
+import CV from "../../assets/MyCV.pdf";
 import { AiOutlineCheck } from "react-icons/ai";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -20,13 +20,16 @@ const Skills = () => {
 
   return (
     <Container>
-      <img src={img} alt="" />
+      <img
+        src={img}
+        alt="Amir Tahiri Portfolio website programming skills image"
+      />
       <motion.div
         ref={ref}
         className="right"
         variants={{
-          hidden: { opacity: 0, x: 180 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, y: 180 },
+          visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={animation}
@@ -76,7 +79,7 @@ const Skills = () => {
           </div>
           <div className="row">
             <AiOutlineCheck className="icon" />
-            <h3>Tailwind CSS</h3>
+            <h3>Tailwind CSS*</h3>
             <span>
               <div></div>
             </span>
@@ -84,7 +87,7 @@ const Skills = () => {
           </div>
           <div className="row">
             <AiOutlineCheck className="icon" />
-            <h3>Bootstrap</h3>
+            <h3>Bootstrap*</h3>
             <span>
               <div></div>
             </span>
@@ -92,7 +95,7 @@ const Skills = () => {
           </div>
           <div className="row">
             <AiOutlineCheck className="icon" />
-            <h3>Styled-Co.</h3>
+            <h3>Styled-Co.*</h3>
             <span>
               <div></div>
             </span>

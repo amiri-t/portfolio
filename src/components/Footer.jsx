@@ -1,23 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/personalLogoPng.png";
-import logoDm from "../assets/dmPersonalLogoPng.png";
+import logo from "../assets/Amir-Logo-png.png";
+import logoDm from "../assets/Amir-logo-dm-png.png";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { BiLogoUpwork } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
-// import { InlineWidget, Calendly } from "react-calendly";
 
 const Footer = ({ theme }) => {
-  // Calendly.initInlineWidget({
-  //   url: "https://calendly.com/amiri-t",
-  //   utm: {
-  //     utmChampaign: "Amiri",
-  //   },
-  // });
   const openCalendlyPopup = () => {
-    // Replace 'YOUR_POPUP_LINK' with the actual Calendly pop-up link
     window.open(
       "https://calendly.com/amiri-t/talk-with-amir",
       "calendlyPopup",

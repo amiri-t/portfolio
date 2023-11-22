@@ -24,7 +24,10 @@ const TheProjects = () => {
       <div className="projects">
         <div className="project">
           <Link to={"/projects/asites-agency"} className="link-styles">
-            <img src={asitesAgency} alt="" />
+            <img
+              src={asitesAgency}
+              alt="Amir Tahiri Portfolio Website projects asites agency website "
+            />
             <h2>ASites Agency</h2>
           </Link>
           <p>
@@ -38,7 +41,10 @@ const TheProjects = () => {
         </div>
         <div className="project">
           <Link to={"/projects/travelo"} className="link-styles">
-            <img src={travelo} alt="" />
+            <img
+              src={travelo}
+              alt="Amir Tahiri Portfolio Website projects travelo website image"
+            />
             <h2>Travelo</h2>
           </Link>
           <p>
@@ -53,7 +59,10 @@ const TheProjects = () => {
 
         <div className="project">
           <Link to={"/projects/amiri-sites"} className="link-styles">
-            <img src={amiriSites} alt="" />
+            <img
+              src={amiriSites}
+              alt="Amir Tahiri Portfolio Website projects website amiri sites"
+            />
             <h2>AmiriSites</h2>
           </Link>
           <p>
@@ -67,7 +76,10 @@ const TheProjects = () => {
         </div>
         <div className="project">
           <Link to={"/projects/the-tasty-table"} className="link-styles">
-            <img src={theTTT} alt="" />
+            <img
+              src={theTTT}
+              alt="Amir Tahiri Portfolio Website projects the tasty table website image"
+            />
             <h2>The Tasty Table</h2>
           </Link>
           <p>
@@ -82,7 +94,10 @@ const TheProjects = () => {
         </div>
         <div className="project">
           <Link to={"/projects/dream-decor"} className="link-styles">
-            <img src={dreamDecor} alt="" />
+            <img
+              src={dreamDecor}
+              alt="Amir Tahiri Portfolio Website projects dream decor website image"
+            />
             <h2>DreamDecor</h2>
           </Link>
           <p>
@@ -97,7 +112,10 @@ const TheProjects = () => {
         </div>
         <div className="project">
           <Link to={"/projects/phone-hive"} className="link-styles">
-            <img src={phoneHive} alt="" />
+            <img
+              src={phoneHive}
+              alt="Amir Tahiri Portfolio Website projects phoneHIVE website image"
+            />
             <h2>PhoneHIVE</h2>
           </Link>
           <p>
@@ -111,7 +129,10 @@ const TheProjects = () => {
         </div>
         <div className="project">
           <Link to={"/projects/starbucks-clone"} className="link-styles">
-            <img src={starbucksClone} alt="" />
+            <img
+              src={starbucksClone}
+              alt="Amir Tahiri Portfolio Website projects starbucks clone website image"
+            />
             <h2>Starbucks Clone</h2>
           </Link>
           <p>

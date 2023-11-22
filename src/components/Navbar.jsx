@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
-import logo from "../assets/personalLogoPng.png";
-import logoDm from "../assets/dmPersonalLogoPng.png";
+import logo from "../assets/Amir-Logo-png.png";
+import logoDm from "../assets/Amir-logo-dm-png.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const Navbar = ({ theme, switchTheme }) => {
@@ -74,9 +74,17 @@ const Navbar = ({ theme, switchTheme }) => {
     >
       <Link to={"/"} className="link-styles">
         {theme === "dark" ? (
-          <img className="logo" src={logoDm} alt="" />
+          <img
+            className="logo"
+            src={logoDm}
+            alt="Amir Tahiri Portfolio website Amiri Logo"
+          />
         ) : (
-          <img className="logo" src={logo} alt="" />
+          <img
+            className="logo"
+            src={logo}
+            alt="Amir Tahiri Portfolio website Amiri Logo"
+          />
         )}
       </Link>
       <ul
@@ -203,13 +211,13 @@ const Container = styled.div`
   padding: 1% 4%;
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 70px;
   width: 100%;
   z-index: 100;
   overflow-x: visible;
   transition: 0.2s;
   .logo {
-    width: 150px;
+    width: 100px;
     margin-top: 7px;
   }
   .nav-menu {

@@ -1,15 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import bannerImg from "../assets/servicesPageAssets/webDesignBannerImg.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import webDesignExamplesD from "../assets/servicesPageAssets/designExamplesImgD.png";
 import webDesignExamplesL from "../assets/servicesPageAssets/designExamplesImgL.png";
-import UIimg from "../assets/servicesPageAssets/UIimg.png";
-import respImg from "../assets/servicesPageAssets/resImg.png";
-import HQimg from "../assets/servicesPageAssets/HQimg.png";
-import accessibilityImg from "../assets/servicesPageAssets/accessibilityImg.png";
-import socialMediaImg from "../assets/servicesPageAssets/socialMediaImg.png";
-import animationsImg from "../assets/servicesPageAssets/animationsImg.png";
 import WebDesignBanner from "../components/servicesComponents/WebDesignBanner";
 import { Link } from "react-router-dom";
 import WebServices from "../components/servicesComponents/WebServices";

@@ -76,7 +76,6 @@ const WebServices = () => {
         </p>
       </motion.div>
       <motion.div
-        ref={ref}
         variants={{
           hidden: { opacity: 0, x: 200 },
           visible: { opacity: 1, x: 0 },
@@ -95,7 +94,6 @@ const WebServices = () => {
         </p>
       </motion.div>
       <motion.div
-        ref={ref}
         variants={{
           hidden: { opacity: 0, x: 200 },
           visible: { opacity: 1, x: 0 },
@@ -114,7 +112,6 @@ const WebServices = () => {
         </p>
       </motion.div>
       <motion.div
-        ref={ref}
         variants={{
           hidden: { opacity: 0, x: 200 },
           visible: { opacity: 1, x: 0 },

@@ -38,7 +38,10 @@ const Projects = () => {
             animate={animation1}
             transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
           >
-            <img src={asites} alt="" />
+            <img
+              src={asites}
+              alt="Amir Tahiri Portfolio website ASites Agency image"
+            />
             <h3>ASites Agency</h3>
             <p>
               ASites Agency is my own angecy. It a service-based agency where we
@@ -58,7 +61,10 @@ const Projects = () => {
             animate={animation1}
             transition={{ duration: 0.7, delay: 0.7, type: "spring" }}
           >
-            <img src={travelo} alt="" />
+            <img
+              src={travelo}
+              alt="Amir Tahiri Portfolio website Travelo project image"
+            />
             <h3>Travelo</h3>
             <p>
               Travelo is a Travel Agnecy website I recently developed. It
@@ -79,7 +85,10 @@ const Projects = () => {
             animate={animation1}
             transition={{ duration: 0.7, delay: 1, type: "spring" }}
           >
-            <img src={theTastyTable} alt="" />
+            <img
+              src={theTastyTable}
+              alt="Amir Tahiri Portfolio website The Tasty Table image"
+            />
             <h3>The Tasty Table</h3>
             <p>
               The Tasty Table is a website I built only for design, it doesnt

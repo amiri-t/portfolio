@@ -11,7 +11,10 @@ const TheServices = () => {
     <Container>
       <div className="services">
         <div className="service">
-          <img src={webDesignImg} alt="" />
+          <img
+            src={webDesignImg}
+            alt="Amir Tahiri Portfolio Website web design services"
+          />
           <div>
             <h2>Web Design & Development</h2>
             <p>
@@ -42,7 +45,7 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service reversed">
-          <img src={SEOimg} alt="" />
+          <img src={SEOimg} alt="Amir Tahiri Portfolio Website seo services" />
           <div>
             <h2>SEO (Search Engine Optimization)</h2>
             <p>
@@ -70,7 +73,10 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service">
-          <img src={socialMediaAdsImg} alt="" />
+          <img
+            src={socialMediaAdsImg}
+            alt="Amir Tahiri Portfolio Website social media marketing services"
+          />
           <div>
             <h2>Social Media Marketing</h2>
             <p>
@@ -102,7 +108,7 @@ const TheServices = () => {
         <div className="service reversed">
           <img
             src="https://cdn3d.iconscout.com/3d/premium/thumb/content-creation-4291890-3569923.png"
-            alt=""
+            alt="Amir Tahiri Portfolio Website content creation and copywriting services"
           />
           <div>
             <h2>Content Creation & Copywriting</h2>
@@ -130,7 +136,10 @@ const TheServices = () => {
           </div>
         </div>
         <div className="service ">
-          <img src={brandIdentityDesignImg} alt="" />
+          <img
+            src={brandIdentityDesignImg}
+            alt="Amir Tahiri Portfolio Website branding design services"
+          />
           <div>
             <h2>Brand Identity Design</h2>
             <p>

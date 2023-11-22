@@ -30,8 +30,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { x: -200, opacity: 0 },
-            visible: { x: 0, opacity: 1 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}
@@ -48,8 +48,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { opacity: 0, x: -200 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}
@@ -68,8 +68,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { opacity: 0, x: -200 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}
@@ -88,8 +88,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { opacity: 0, x: -200 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}
@@ -108,8 +108,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { opacity: 0, x: -200 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}
@@ -128,8 +128,8 @@ const UIServices = () => {
         <motion.div
           className="item"
           variants={{
-            hidden: { opacity: 0, x: -200 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
           initial="hidden"
           animate={animation1}

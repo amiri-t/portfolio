@@ -15,6 +15,7 @@ import { SiUpwork } from "react-icons/si";
 import { motion, useAnimation, useInView } from "framer-motion";
 import CV from "../../assets/CV.pdf";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 const ContactMeComp = () => {
   const sendEmail = (e) => {
@@ -83,21 +84,63 @@ const ContactMeComp = () => {
         <div className="item socials">
           <h3>PERSONAL SOCIALS</h3>
           <div>
-            <BsInstagram className="icon" />
-            <AiFillGithub className="icon" />
-            <SiUpwork className="icon" />
-            <MdEmail className="icon" />
-            <BsDribbble className="icon" />
+            <Link
+              to={"https://www.instagram.com/amir.tahiri_/"}
+              target="_blank"
+            >
+              <BsInstagram className="icon" />
+            </Link>
+            <Link to={"https://github.com/amiri-t"} target="_blank">
+              <AiFillGithub className="icon" />
+            </Link>
+            <Link
+              to={"https://www.upwork.com/workwith/amiris2"}
+              target="_blank"
+            >
+              <SiUpwork className="icon" />
+            </Link>
+            <Link
+              to={
+                "https://mail.google.com/mail/?view=cm&fs=1&to=tahiriamir49@gmail.com"
+              }
+              target="_blank"
+            >
+              <MdEmail className="icon" />
+            </Link>
+            <Link to={"https://dribbble.com/amirii"} target="_blank">
+              <BsDribbble className="icon" />
+            </Link>
           </div>
         </div>
         <div className="item socials">
           <h3>BUSINESS SOCIALS</h3>
           <div>
-            <BsInstagram className="icon" />
-            <BsDribbble className="icon" />
-            <BsYoutube className="icon" />
-            <BsPinterest className="icon" />
-            <BsFacebook className="icon" />
+            <Link to={"https://www.instagram.com/amirisites/"} target="_blank">
+              <BsInstagram className="icon" />
+            </Link>
+            <Link
+              to={
+                "https://gmail.google.com/mail/?view=cm&fs=1&to=amirisites@gmail.com"
+              }
+              target="_blank"
+            >
+              <MdEmail className="icon" />
+            </Link>
+            <Link to={"https://dribbble.com/amirii"} target="_blank">
+              <BsDribbble className="icon" />
+            </Link>
+            <Link to={"https://www.youtube.com/@amirisites"} target="_blank">
+              <BsYoutube className="icon" />
+            </Link>
+            <Link to={"https://www.pinterest.com/amirisites/"} target="_blank">
+              <BsPinterest className="icon" />
+            </Link>
+            <Link
+              to={"https://www.facebook.com/profile.php?id=100092425893570"}
+              target="_blank"
+            >
+              <BsFacebook className="icon" />
+            </Link>
           </div>
         </div>
       </motion.div>

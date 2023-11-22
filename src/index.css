@@ -81,9 +81,9 @@ code {
   --primaryColor: #73bbc9;
   --primaryColorLight: #73bbc9b6;
   --secondaryColor: #f1d4e5;
-  --primaryBackgroundColor: #040c18;
-  --secondaryBackgroundColor: #091527;
-  --trBackgroundColor: #040c18bd;
+  --primaryBackgroundColor: #01060f;
+  --secondaryBackgroundColor: #030811;
+  --trBackgroundColor: #020811bd;
   --fontPrimaryColor: rgb(243, 243, 243);
   --fontPrimaryColorOpp: #070707;
   --fontSecondaryColor: rgb(190, 190, 190);
@@ -96,22 +96,22 @@ code {
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
     #002853 0%,
-    #040c18 25%
+    #01060f 25%
   );
   --backgroundGradient2: radial-gradient(
     circle at 90% 45%,
     #002853 0%,
-    #040c18 25%
+    #01060f 25%
   );
   --backgroundGradient3: radial-gradient(
     circle at 10% 60%,
     #002853 0%,
-    #040c18 13%
+    #01060f 13%
   );
   --backgroundGradient4: radial-gradient(
     circle at 90% 58%,
     #002853 0%,
-    #040c18 13%
+    #01060f 13%
   );
 }
 

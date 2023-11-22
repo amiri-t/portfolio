@@ -38,11 +38,11 @@ const Testimonials = () => {
         >
           <RiDoubleQuotesR className="icon" />
           <p>
-            I needed a web app for my boxing club. I need a clinets app and an
-            admin app, where I can register, modify, delete etc. users. I found
-            Amir on Fiverr. He had no experience at all. I wanted to hire him
-            beacause he looks professional. He was very nice and took care of
-            everything in an amazing way. He also did extra work. Great guy.
+            I needed a web app for my boxing club. I needed a clinets app and an
+            admin app, where I could register, modify, delete etc. users. I
+            found Amir on Fiverr. He had no experience at all. I wanted to hire
+            him beacause he looked professional. He was very nice and took care
+            of everything in an amazing way. He also did extra work. Great guy.
             Amazing job.
           </p>
           <div>

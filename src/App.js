@@ -13,6 +13,9 @@ import SEOPage from "./routes/SEOPage";
 import SocialMediaMarketing from "./routes/SocialMediaMarketing";
 import ContentCreationPage from "./routes/ContentCreationPage";
 import BrandingDesign from "./routes/BrandingDesign";
+import ReactGA from "react-ga";
+
+// Initialize Google Analytics with your tracking code
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "light" : "dark");
@@ -21,6 +24,9 @@ function App() {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
+
+  ReactGA.initialize("G-3B4BBKGZMP");
+
   return (
     <div className="App" data-theme={theme}>
       <Navbar switchTheme={switchTheme} theme={theme} />

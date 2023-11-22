@@ -20,7 +20,7 @@ const ProjectsBanner = () => {
       <motion.img
         className="bannerImg"
         src={bannerImg}
-        alt=""
+        alt="Amir Tahiri Portfolio Website projects banner image"
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: 200, opacity: 0 }}
         transition={{ duration: 0.7, bounce: 0.3, type: "spring" }}

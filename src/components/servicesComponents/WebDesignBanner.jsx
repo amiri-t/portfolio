@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import bannerImg from "../../assets/servicesPageAssets/webDesignBannerImg.png";
 import { motion } from "framer-motion";
 
 const WebDesignBanner = () => {

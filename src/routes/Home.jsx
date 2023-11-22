@@ -11,13 +11,17 @@ import Testimonials from "../components/homePageComponents/Testimonials";
 import ContactMe from "../components/homePageComponents/ContactMe";
 import WhyHireMe from "../components/homePageComponents/WhyHireMe";
 import FAQ from "../components/homePageComponents/FAQ";
+import ReactGA from "react-ga";
 
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
-    document.title = "Amir Tahiri - Portfolio";
+    document.title = "Amir Tahiri - Web Designer Developer | Portfolio";
+  }, []);
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
     <Container>
